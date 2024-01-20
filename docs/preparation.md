@@ -1,0 +1,5 @@
+# Bienvenue sur MVVB (Mieux Vivre et Vivre Bien): Inspirer une Vie Épanouissante
+MVVB est une organisation profondément ancrée dans la promotion d'un mode de vie équilibré et gratifiant. Nous croyons que chaque individu mérite d'explorer son potentiel maximal de bien-être, et c'est cette conviction qui guide chacune de nos actions. En tant qu’équipe de développeurs engagés travaillant avec l’organisation, elle nous demande de créer un site web présentant les conférences et évènements qu’ils organisent à travers le monde pour sensibiliser et éduquer le monde sur le mieux vivre et le vivre bien.
+Pour réaliser ce projet nous nous inspirerons des sites existants telles que :
+[Le lien vers renderforest](https://www.renderforest.com/fr/websites/conference)
+[Le lien vers le site festivale de cannes](https://www.festival-cannes.com)
