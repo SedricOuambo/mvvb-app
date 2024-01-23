@@ -1,3 +1,38 @@
+.grid{
+    display: grid;
+    grid-template-columns: 12rem;
+    gap: 2rem;
+    align-items: center;
+}
+
+.grid div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+}
+
+.grid p{
+    color: var(--first-color);
+    font-family: var(--font-semi-bold);
+    font-size: var(--h1-font-size);
+}
+
+.grid i{
+    color: #FFF;
+    font-size: var(--h1-font-size);
+}
+
+.horaire__icon{
+    background-color: var(--first-color-second);
+    width: 4rem;
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+
 /********** GESTION DES TAILLES D'ECRAN ************/
 
 /*****  LARGEUR SUPERIEURE a 375px et INFERIEURE a 568px ****/
@@ -7,15 +42,30 @@
 
 /*****  LARGEUR SUPERIEURE a 568px et INFERIEURE a 768px  ****/
 @media screen and (min-width: 568px){
-
+    .grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /*****  LARGEUR SUPERIEURE a 768px et INFERIEURE a 1024px  ****/
 @media screen and (min-width: 768px){
+    .grid{
+        grid-template-columns: repeat(3, 1fr);;
+        gap: 3rem;
+    }
 
+    .horaire__icon{
+         width: 4rem;
+    }
 }
 
 /*****  LARGEUR SUPERIEURE a 1024px ****/
 @media screen and (min-width: 1024px){
+    .grid{
+        gap: 10rem;
+    }
 
+    .horaire__icon{
+        width: 5rem;
+   }
 }

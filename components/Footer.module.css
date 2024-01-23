@@ -1,74 +1,122 @@
-
-.footer {
-    padding: 1rem;
-    background-color: var(--first-color);
-    text-align: center;
-    color: white;
-    display: flex;
-    flex-direction: column;
-
-}
-
-.footer container {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.footer img {
-    width: 2rem;
-    height: auto;
-    display: flex;
-}
-
-.row1{
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.col1{
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    width: 200px;
-  
-}
-
-.col1 div{
-    display: flex;
-  justify-content: space-between;
-  text-align: left;
-
-    
-}
-
-.col1 h3{
-    font-size: 30px;
-    color: palevioletred;
-    text-align:left;
-    font-family: 'Harrington', cursive;
-      margin: 2px;;
-    
-}
-.row2 p{
-   text-align: right;
-}
-
-.icone{
+.icon{
     font-size: 2rem;
     color: white;
     justify-content: left;
     display: flex;
 }
 
-.row2 div{
+.footer {
     display: flex;
-    margin-right: 50px;  
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+    background-color: var(--first-color);
+    color: white;
 }
 
-.icone2 {
-    font-size: 3rem;
-    color: rgb(231, 71, 98);
+.footer container {
     display: flex;
-       
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+.footer__mvvb{
+    width: 80%;
+}
+
+.footer__mvvb div{
+    color: var(--first-color-second);
+    font-size: var(--big-font-size);
+}
+
+.footer__contact{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.row1{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_social{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.footer__horaire{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 2.5rem;
+}
+
+.footer__horaire p{
+    font-size: var(--h2-font-size);
+    color: var(--first-color-second);
+}
+
+.col{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.col div{
+  display: flex;
+  justify-content: space-between;
+  text-align: left;  
+}
+
+.separator{
+    background-color: var( --first-color-lighter);
+    height: .1rem;
+}
+
+.copyright{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 1.5rem;
+    color: #aaa;
+}
+
+/********** GESTION DES TAILLES D'ECRAN ************/
+
+/*****  LARGEUR SUPERIEURE a 568px et INFERIEURE a 768px  ****/
+@media screen and (min-width: 568px){
+    .footer__horaire{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer__mvvb{
+        width: 60%;
+    }
+}
+
+/*****  LARGEUR SUPERIEURE a 768px et INFERIEURE a 1024px  ****/
+@media screen and (min-width: 768px){
+    .footer__mvvb{
+        width: 40%;
+    }
+}
+
+/*****  LARGEUR SUPERIEURE a 1024px ****/
+@media screen and (min-width: 1024px){
+    .container {
+        width: 1000px;
+    }
+
+    .footer__horaire{
+        margin-top: 1rem;
+    }
+
+    .footer__mvvb{
+        width: 20%;
+    }
+}

@@ -2,57 +2,51 @@ import styles from './Footer.module.css'
 
 export default function Footer() {
     return <footer className={styles.footer}>
-            <div className="container">
+            <div className={styles.container +' ' +'container'}>
                 <div className={styles.row1}>
                     {/* column1 */}
-                    <div className={styles.col1}>
-                        <h3>Mvvb</h3>
-                        <div>
-                            Prenez soin de votre santé physique et mental grâce à notre conférence internationale
-                        </div>
-                    </div>
-                    {/* column2 */}
-                    <div className="col2">
-                        <p>Date</p>
-                        <p> Du 12/02/2024 au </p> 
-                        <p>15/02/2024 </p>                  
-                    </div>
-                    {/* column3 */}
-                    <div className="col3">
-                        <h4>Adresse</h4>
+                    <div className={styles.col +' '+styles.footer__mvvb}>
+                        <div>Mvvb</div>
                         <p>
-                            1240 avenue mvvb
+                            Prenez soin de votre santé physique et mental grâce à notre conférence internationale.
                         </p>
-
                     </div>
+
+                    <div className={styles.footer_social}>  
+                        <a href="#"><i className={styles.icon  +' '+ 'uil uil-facebook-f'}></i></a> 
+                        <a href="#"><i className={styles.icon  +' '+ 'uil uil-twitter'}></i></a> 
+                        <a href="#"><i className={styles.icon  +' '+ 'uil uil-instagram'}></i></a>
+                    </div>
+                </div>
+
+                <div className={styles.footer__horaire}>
+                    {/* column2 */}
+                    <div className={styles.col}>
+                        <p>Date</p>
+                        <div> Du 12/02/2024 au 15/02/2024</div>              
+                    </div>
+
+                    {/* column3 */}
+                    <div className={styles.col}>
+                        <p>Adresse</p>
+                        <div> 1240 avenue mvvb</div>
+                    </div>
+
                     {/* column4 */}
-                    <div className="col4">
-                        <h4>Contact</h4>
-                        
-                            <p>mvvb@gmail.com</p>
-                            <p>+1 816 999 999</p>
-                        
-
+                    <div className={styles.col}>
+                        <p>Contact</p>
+                        <span className={styles.footer__contact}>
+                            <div>mvvb@gmail.com</div>
+                            <div>+1 816 999 999</div>
+                        </span>
                     </div>
                 </div>
 
-                <hr></hr>
+                <div className={styles.separator}></div>
 
-                <div className={styles.row2}>
-                <div>  
-                    <i className={styles.icone  +' '+ 'uil uil-facebook-f'}></i>
-                    <i className={styles.icone  +' '+ 'uil uil-twitter'}></i>
-                    <i className={styles.icone  +' '+ 'uil uil-instagram'}></i>
-                    
-                    <i className={styles.icone2  +' '+ 'uil uil-arrow-circle-up'}></i>
-                </div> 
-       
-                             
-                    <p> &copy; Copyright College la Cite - Hiver 2024</p>
-                  
+                <div className={styles.copyright}>
+                    &copy; Copyright Collège la Cité - Hiver 2024
                 </div>
-
-
             </div>       
     </footer>
 }
