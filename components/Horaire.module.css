@@ -1,0 +1,21 @@
+/********** GESTION DES TAILLES D'ECRAN ************/
+
+/*****  LARGEUR SUPERIEURE a 375px et INFERIEURE a 568px ****/
+@media screen and (min-width: 375px){
+
+}
+
+/*****  LARGEUR SUPERIEURE a 568px et INFERIEURE a 768px  ****/
+@media screen and (min-width: 568px){
+
+}
+
+/*****  LARGEUR SUPERIEURE a 768px et INFERIEURE a 1024px  ****/
+@media screen and (min-width: 768px){
+
+}
+
+/*****  LARGEUR SUPERIEURE a 1024px ****/
+@media screen and (min-width: 1024px){
+
+}

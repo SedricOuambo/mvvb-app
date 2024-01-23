@@ -1,0 +1,66 @@
+.container p{
+    color: var(--text-color);
+}
+
+.notifications_form{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.notifications_form input[type="text"], 
+.notifications_form input[type="submit"]{
+    height: 3rem;
+    font-family: var(--body-color);
+    font-size: var(--normal-font-size);
+    border: none;
+    outline: none;
+    border-radius: 50px;
+}
+
+.notifications_form input[type="text"]{
+    background-color: var(--input-color);
+    color: var(--text-color);
+    width: 100%;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.notifications_form input[type="submit"]{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    margin-top: 1rem;
+    background-color: var(--first-color-second);
+    color: #fff;
+    z-index: 10;
+}
+
+.notifications_form input[type="submit"]:hover{
+    background-color: var(--first-color-alt);
+    cursor: pointer;
+}
+
+/********** GESTION DES TAILLES D'ECRAN ************/
+
+/*****  LARGEUR SUPERIEURE a 568px*/
+@media screen and (min-width: 568px){
+    .notifications_form{
+        flex-direction: row;
+        width: 90%;
+    }
+
+    .notifications_form input[type="text"]{
+        text-align: center;
+        padding-right: 2.5rem;
+    }
+
+    .notifications_form input[type="submit"]{
+        position: absolute;
+        margin-top: 0;
+        right: -4rem;
+    }
+}

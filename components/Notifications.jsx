@@ -2,8 +2,14 @@ import styles from './Notifications.module.css'
 export default function Notifications() {
     return <section className={styles.section}>
         <h1 className='title'> Notifications</h1>
-         <div className='container'>
-            <h2>Recevoir les notifications pour les evennements a venir</h2>
+         <div className={styles.container +' '+'container'}>
+            <p>Voulez-vous recevoir les notifications pour les événements à venir ?</p>
+            <form>
+                <div className={styles.notifications_form}>
+                    <input type="text" placeholder='Votre email'/>
+                    <input type="submit" value="Souscrire" />
+                </div>
+            </form>
          </div>
     </section>
 }
