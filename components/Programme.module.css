@@ -1,0 +1,9 @@
+.section{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.section h2{
+    color: var(--text-color);
+}

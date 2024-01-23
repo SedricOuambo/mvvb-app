@@ -1,7 +1,149 @@
+/**************** GOOGLE FONTS ****************/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* Quelques styles personalisés */
+:root{
+  --header-height: 3rem;
+
+  /****** Couleurs ******/
+  /****** Code de base ******/
+  --hue-color: 260;
+
+  /* Variations avec hsl */
+  --first-color: hsl(var(--hue-color), 80%, 16%);
+  --first-color-second: hsl(var(--hue-color), 69%, 61%);
+  --first-color-alt: hsl(var(--hue-color), 57%, 53%);
+  --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+  --title-color: hsl(var(--hue-color), 8%, 15%);
+  --text-color: hsl(var(--hue-color), 8%, 45%);
+  --text-color-light: hsl(var(--hue-color), 8%, 65%);
+  --input-color: hsl(var(--hue-color), 70%, 96%);
+  --body-color: hsl(var(--hue-color), 60%, 99%);
+  --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+  --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+
+
+  /****** Font and typography *******/
+  --body-font: 'Poppins', sans-serif;
+
+  /* Les differentes tailles pour les petits ecrans */
+  --big-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --mormal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /************ Font weight ***************/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /******** Les differentes marges ***************/
+  --mb-0-25: .25rem;
+  --mb-0-5: .5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+
+  /****** z index  *****/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+/****** Les tailles pour les grands ecrans *************/
+@media screen and (min-width: 968px){
+  :root{
+      --big-font-size: 3rem;
+      --h1-font-size: 2.25rem;
+      --h2-font-size: 1.5rem;
+      --h3-font-size: 1.25rem;
+      --normal-font-size: 1rem;
+      --small-font-size: .875rem;
+      --smaller-font-size: .813rem;
+  }
+}
+
+/********** LA BASE **************/
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *, *::before, *::after {
   box-sizing: inherit;
+}
+
+body{
+  margin: 0 0 var(--header-height) 0;
+  font-family: var(--body-color);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+h1, h2, h3, h4{
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5rem 0;
+}
+
+.container{
+  padding: 2rem 0rem;
+  max-width: 300px;
+}
+
+.title{
+  font-size: var(--big-font-size);
+  color: var(--title-color);
+}
+
+
+/********** GESTION DES TAILLES D'ECRAN ************/
+
+/*****  LARGEUR INFERIEURE a 375px ****/
+@media screen and (min-width: 375px){
+  .container{
+    max-width: 320px;
+  }
+}
+
+/*****  LARGEUR SUPERIEURE a 568px ****/
+@media screen and (min-width: 568px){
+  .container{
+    max-width: 500px;
+  }
+}
+
+/*****  LARGEUR SUPERIEURE a 768px ****/
+@media screen and (min-width: 768px){
+  .container{
+    max-width: 700px;
+  }
+}
+
+/*****  LARGEUR SUPERIEURE a 1024px ****/
+@media screen and (min-width: 1024px){
+  .container{
+    max-width: 1000px;
+  }
 }

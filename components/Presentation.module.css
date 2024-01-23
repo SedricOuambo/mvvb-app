@@ -1,0 +1,14 @@
+.section{
+    height: 300px;
+}
+
+.section span{
+    color: var(--text-color);
+    font-size: 2rem;
+   
+}
+
+.section p{
+    color: var(--text-color-light);
+    font-size: 1rem;
+}
