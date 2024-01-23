@@ -1,6 +1,74 @@
+
 .footer {
     padding: 1rem;
     background-color: var(--first-color);
     text-align: center;
     color: white;
+    display: flex;
+    flex-direction: column;
+
 }
+
+.footer container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer img {
+    width: 2rem;
+    height: auto;
+    display: flex;
+}
+
+.row1{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.col1{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 200px;
+  
+}
+
+.col1 div{
+    display: flex;
+  justify-content: space-between;
+  text-align: left;
+
+    
+}
+
+.col1 h3{
+    font-size: 30px;
+    color: palevioletred;
+    text-align:left;
+    font-family: 'Harrington', cursive;
+      margin: 2px;;
+    
+}
+.row2 p{
+   text-align: right;
+}
+
+.icone{
+    font-size: 2rem;
+    color: white;
+    justify-content: left;
+    display: flex;
+}
+
+.row2 div{
+    display: flex;
+    margin-right: 50px;  
+}
+
+.icone2 {
+    font-size: 3rem;
+    color: rgb(231, 71, 98);
+    display: flex;
+       
+}
+
