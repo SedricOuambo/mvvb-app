@@ -3,9 +3,8 @@ export default function Inscription() {
     return <section className={styles.section}>
         <h1 className='title'> Inscription</h1>
          <div className={styles.form + ' ' + styles.inscription__container + ' ' + 'container'}>
-            <h2>Veillez vous inscrire</h2>
-            
-            
+            <h2>Veuillez vous inscrire</h2>
+              
             <form className={styles.form}>
                 <div className={styles.form + ' ' + styles.inscription__inputs}>
                     <div className={styles.inscription__content}>

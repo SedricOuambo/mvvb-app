@@ -22,13 +22,16 @@
 .buttons button {
     width: 150px;
     height: 50px;
+    border: none; 
     border-radius: 50px; 
     margin: 20px;
-    color: var(--text-color); 
+    color: #fff; 
     cursor: pointer;
+    background-color: var(--first-color-second);
+    font-weight: var(--font-medium);
+    font-size: var(--normal-font-size);
 }
 
 .buttons button:hover {
-    background-color:var(--hue-color) ;
-    border-color:var(--hue-color) ;
+    background-color: var(--first-color-alt);
 }
