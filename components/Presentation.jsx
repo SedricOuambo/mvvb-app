@@ -15,6 +15,10 @@ export default function Presentation() {
                 Une fois de plus, nous nous rencontrons en pensant que le soutien mutuel et la force unie peuvent nous 
                 être bénéfiques à tous. Venez nous rejoindre 
             </p>
+            <div className={styles.buttons}>
+                <button type='button'>Participer</button>
+                <button type='button'>Plus de details</button>
+            </div>
         </div>
     </section>
 }
