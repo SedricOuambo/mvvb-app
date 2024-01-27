@@ -1,11 +1,6 @@
-
-
-
 .form{
     display: grid;
 }
-
-
 
 .inscription__content{
     background-color: var(--input-color);

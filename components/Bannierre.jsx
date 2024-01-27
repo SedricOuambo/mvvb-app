@@ -2,10 +2,7 @@ import styles from './Bannierre.module.css'
 
 export default function Bannierre() {
     return <section className={styles.banner}>
-        
         <span>MVVB</span>  
-        
-       
             <div className={styles.Chronometre}>
                 <div className={styles.decopmte}>
                 <div className={styles.time}>00:</div>
@@ -24,9 +21,6 @@ export default function Bannierre() {
                 <div className={styles.label}>SECONDES</div>
                 </div>
             </div>
-        
             <p>Mieux Vivre et Vivre Bien</p>
-        
-        
     </section>
 }

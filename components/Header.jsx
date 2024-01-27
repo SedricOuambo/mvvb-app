@@ -12,7 +12,5 @@ export default function Header() {
             <h1>MVVB</h1>
             <MenuNav />
         </div>
-        
     </header>
-    
 }
