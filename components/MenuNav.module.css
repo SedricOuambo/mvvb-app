@@ -1,3 +1,7 @@
+.nav{
+    position: relative;
+}
+
 .nav ul {
     display: flex;
     flex-wrap: wrap;
@@ -15,4 +19,35 @@
 
 .nav a {
     color: white;
+    position: relative;
 }
+
+.subMenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    top: 100%;
+    left: 0;
+    background-color:var(--first-color);
+    z-index: 1;
+    width: 100px;
+  }
+  
+  .subMenu li {
+    padding: 8px 0;
+  }
+  
+  .subMenu a {
+    text-decoration: none;
+    color: white;
+    
+
+  }
+  
+  .subMenu a:hover {
+    color: #0070f3;
+  }
+
+  

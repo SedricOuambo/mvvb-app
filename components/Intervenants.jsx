@@ -1,3 +1,4 @@
+
 import styles from './Intervenants.module.css'
 import Image from 'next/image'
 import sedric_photo from '@/public/img/Sedric.png'
