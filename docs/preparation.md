@@ -15,3 +15,4 @@ La conférence s'etendra sur 2 jours.
 Pour réaliser ce projet nous nous inspirerons des sites existants tels que :  
 * renderforest [lien](https://www.renderforest.com/fr/websites/conference)  
 * le site festivale de cannes [lien](https://www.festival-cannes.com)
+* sante-entreprise [lien](https://sante-entreprise.ca/nutrition/)

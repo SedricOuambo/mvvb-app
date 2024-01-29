@@ -1,0 +1,99 @@
+.section2{
+    margin: 0 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+}
+
+.container div{
+    margin-bottom: 1rem;
+}
+
+.contenu{
+    text-align: justify;
+}
+
+.container img {
+    width: 20rem;
+    height: auto;
+    border-radius: 5px;
+}
+
+.heure{
+    font-size: var(--h1-font-size);
+    color: var(--title-color);
+    margin: 0 0;
+}
+
+.titre{
+    font-size: var(--h2-font-size);
+    color: var(--title-color);
+    margin: 0.5rem 0rem;
+}
+
+.separateur{
+    height: 0.1rem;
+    width: 300px;
+    background-color: var(--first-color-alt);
+}
+
+/********** GESTION DES TAILLES D'ECRAN ************/
+
+/*****  LARGEUR SUPERIEURE a 375px et INFERIEURE a 568px ****/
+@media screen and (min-width: 375px){
+    .separateur{
+        width: 300px;
+    }
+}
+  
+/*****  LARGEUR SUPERIEURE a 568px et INFERIEURE a 768px  ****/
+@media screen and (min-width: 568px){
+    .container{
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+
+    .inverser{
+        flex-direction: row-reverse;
+    }
+
+    .container img {
+        width: 12rem;
+    }
+
+    .separateur{
+        width: 500px;
+    }
+}
+
+/*****  LARGEUR SUPERIEURE a 768px et INFERIEURE a 1024px  ****/
+@media screen and (min-width: 768px){
+    .container{
+        gap: 1rem;
+    }
+    .container img {
+        width: 20rem;
+    }
+
+    .separateur{
+        width: 700px;
+    }
+}
+
+/*****  LARGEUR SUPERIEURE a 1024px ****/
+@media screen and (min-width: 1024px){
+    .container{
+        width: 100%;
+    }
+
+    .container img {
+        width: 25rem;
+    }
+
+    .separateur{
+        width: 1000px;
+    }
+}

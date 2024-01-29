@@ -1,3 +1,4 @@
+import {FaInstagram, FaFacebookF, FaTwitter} from "react-icons/fa"
 import styles from './Footer.module.css'
 
 export default function Footer() {
@@ -13,9 +14,9 @@ export default function Footer() {
                     </div>
 
                     <div className={styles.footer_social}>  
-                        <a href="#"><i className={styles.icon  +' '+ 'uil uil-facebook-f'}></i></a> 
-                        <a href="#"><i className={styles.icon  +' '+ 'uil uil-twitter'}></i></a> 
-                        <a href="#"><i className={styles.icon  +' '+ 'uil uil-instagram'}></i></a>
+                        <a href="#"><FaFacebookF className={styles.icon } /></a> 
+                        <a href="#"><FaTwitter className={styles.icon } /></a> 
+                        <a href="#"><FaInstagram className={styles.icon } /></a>
                     </div>
                 </div>
 

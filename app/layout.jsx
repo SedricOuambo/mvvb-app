@@ -12,15 +12,13 @@ import styles from './layout.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
-
-
 export default function RootLayout({ children }) {
   const [page, setPage] = useState('accueil');
 
   return  <html lang="fr">
-      <body className={inter.className + ' ' + styles.body}>
-        <Header setPage={setPage}/>
-        <main className={styles.main}>
+    <body className={inter.className + ' ' + styles.body}>
+      <Header setPage={setPage}/>
+      <main className={styles.main}>
         {/*children*/}
         {page === 'accueil' ?
           <Accueil />
@@ -32,8 +30,8 @@ export default function RootLayout({ children }) {
         :
           <div>404 - Not Found</div>
         }
-        </main>
-        <Footer/>
-        </body>
-    </html>
+      </main>
+      <Footer/>
+    </body>
+  </html>
 }

@@ -6,11 +6,11 @@ export default function MenuNav({setPage}) {
     const [SousmenuProgramme, setSousmenuProgramme] = useState(false);
     const ProgramsClick = () => {
         setSousmenuProgramme(!SousmenuProgramme);
-      };
+    };
     return <nav className={styles.nav}>
         <ul>
             <li>
-            <a href="#" onClick={() => setPage('accueil')}>
+                <a href="#" onClick={() => setPage('accueil')}>
                     Accueil
                 </a>
             </li>
@@ -18,27 +18,24 @@ export default function MenuNav({setPage}) {
                 <a href="#">Anciens Evenements</a>
             </li>
             <li>
-            <a href="#" onClick={ProgramsClick}>
-            Programmes
-            <span>
-                {SousmenuProgramme ? '⮝' : '⮟'}
-            </span>
-          </a>
-          {SousmenuProgramme && (
-            <ul className={styles.subMenu}>
-              <li>
-              <a href="#" onClick={() => setPage('jour1')}>
-                    Jour 1
+              <div>
+                <a href="#" onClick={ProgramsClick}>
+                  Programmes
+                  <span>
+                      {SousmenuProgramme ? '⮝' : '⮟'}
+                  </span>
                 </a>
-              </li>
-              <li>
-              <a href="#" onClick={() => setPage('jour2')}>
-                    Jour 2
-                </a>
-              </li>
-            </ul>
-          )}
-                
+              </div>
+              {SousmenuProgramme && (
+                <div className={styles.subMenu}>
+                    <a href="#" onClick={() => setPage('jour1')}>
+                          Jour 1
+                    </a>
+                    <a href="#" onClick={() => setPage('jour2')}>
+                          Jour 2
+                    </a>
+                </div>  
+              )}
             </li>
             <li>
                 <a href="#">Contacts</a>

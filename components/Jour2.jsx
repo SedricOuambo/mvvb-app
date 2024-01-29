@@ -1,7 +1,8 @@
-
+import Bannierre from '@/components/Bannierre'
 
 export default function Jour2() {
     return <>
+        <Bannierre/>
         <section>
             <h2>jour 2</h2>
             <p>

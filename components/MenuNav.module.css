@@ -1,5 +1,5 @@
 .nav{
-    position: relative;
+  
 }
 
 .nav ul {
@@ -11,8 +11,8 @@
     padding: 0;
     text-align: right;
     margin-left: 300px;
-    
 }
+
 .nav ul li {
     margin-right: 50px;
 }
@@ -23,31 +23,23 @@
 }
 
 .subMenu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    top: 100%;
-    left: 0;
-    background-color:var(--first-color);
-    z-index: 1;
-    width: 100px;
-  }
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  gap: .5rem;
+  margin-top: 0.5rem;
+}
   
-  .subMenu li {
-    padding: 8px 0;
-  }
-  
-  .subMenu a {
-    text-decoration: none;
-    color: white;
-    
+.subMenu li {
+  padding: 8px 0;
+}
 
-  }
-  
-  .subMenu a:hover {
-    color: #0070f3;
-  }
+.subMenu a {
+  text-decoration: none;
+  color: white;
+}
 
+.subMenu a:hover {
+  color: var(--first-color-alt);
+}
   

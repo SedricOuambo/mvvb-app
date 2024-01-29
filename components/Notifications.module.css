@@ -5,7 +5,6 @@
 .notifications_form{
     display: flex;
     flex-direction: column;
-    position: relative;
     width: 100%;
     margin-top: 1rem;
 }
@@ -51,6 +50,7 @@
     .notifications_form{
         flex-direction: row;
         width: 90%;
+        position: relative;
     }
 
     .notifications_form input[type="text"]{
@@ -62,5 +62,12 @@
         position: absolute;
         margin-top: 0;
         right: -4rem;
+    }
+}
+
+/*****  LARGEUR SUPERIEURE a 1024px ****/
+@media screen and (min-width: 1024px){
+    .container{
+        width: 70%;
     }
 }
