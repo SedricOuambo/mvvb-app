@@ -9,18 +9,6 @@
     z-index: var( --z-fixed);
 }
 
-.title {
-    display: flex;
-    align-items: center;
-    color: white;
-}
-
-.header img {
-    width: 2rem;
-    height: auto;
-    margin-right: .5rem;
-}
-
 .header h1 {
     font-size: var(--h1-font-size);
     color: white;
