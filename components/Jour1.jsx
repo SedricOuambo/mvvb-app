@@ -2,16 +2,22 @@ import Bannierre from '@/components/Bannierre'
 import styles from './Jour1.module.css'
 import Sujet from './Sujet'
 
-import Image from 'next/image'
 import img1Sujet1 from '@/public/img/sujet1_1.jpg'
 import img2Sujet1 from '@/public/img/sujet1_2.jpg'
 import img3Sujet1 from '@/public/img/sujet1_3.jpg'
 import img1Sujet2 from '@/public/img/sujet2_1.jpg'
 import img2Sujet2 from '@/public/img/sujet2_2.jpg'
 import img3Sujet2 from '@/public/img/sujet2_3.jpg'
-import imgPause from '@/public/img/pause.jpeg'
-import imgPhysique1 from '@/public/img/physique1.jpeg'
-import imgPhysique2 from '@/public/img/physique2.jpeg'
+import img1Sujet3 from '@/public/img/pause.jpeg'
+import img2Sujet3 from '@/public/img/pause2.jpeg'
+import img3Sujet3 from '@/public/img/pause3.jpeg'
+import img1Sujet4 from '@/public/img/physique1.jpeg'
+import img2Sujet4 from '@/public/img/physique2.jpeg'
+import img3Sujet4 from '@/public/img/physique3.png'
+import img1Sujet5 from '@/public/img/physique4.jpeg'
+import img2Sujet5 from '@/public/img/physique5.jpeg'
+import img3Sujet5 from '@/public/img/physique6.jpeg'
+
 
 export default function Jour1() {
 
@@ -66,18 +72,18 @@ export default function Jour1() {
 
         <Sujet
             heure = "13H10 - 14H00"
-            img1Url = {img1Sujet2}
-            img2Url = {img2Sujet2}
-            img3Url = {img3Sujet2}
+            img1Url = {img1Sujet3}
+            img2Url = {img2Sujet3}
+            img3Url = {img3Sujet3}
             titre_contenu = "PAUSE CAFE"
             direction = ''
         />
 
         <Sujet
             heure = "14H10 - 15H10"
-            img1Url = {img1Sujet2}
-            img2Url = {img2Sujet2}
-            img3Url = {img3Sujet2}
+            img1Url = {img1Sujet4}
+            img2Url = {img2Sujet4}
+            img3Url = {img3Sujet4}
             titre_contenu = "AVEZ-VOUS BOUGÉ AUJOURD’HUI?"
             contenu = {contenu3}
             direction = 'inverser'
@@ -85,9 +91,9 @@ export default function Jour1() {
 
         <Sujet
             heure = "15H20 - 16H20"
-            img1Url = {img1Sujet2}
-            img2Url = {img2Sujet2}
-            img3Url = {img3Sujet2}
+            img1Url = {img1Sujet5}
+            img2Url = {img2Sujet5}
+            img3Url = {img3Sujet5}
             titre_contenu = "OPTIMISEZ VOTRE ENTRAÎNEMENT"
             contenu = {contenu4}
             direction = ''

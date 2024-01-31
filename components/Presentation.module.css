@@ -1,7 +1,3 @@
-.section{
-    height: 300px;
-}
-
 .section span{
     color: var(--text-color);
     font-size: 2rem;
