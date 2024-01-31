@@ -43,7 +43,7 @@ export default function Jour1() {
 
     return <>
         <Bannierre/>
-        <div className={styles.dayTitle}>Journée du 12 Février 2024</div>
+        <div className={styles.dayTitle}>Journée du 12 Février 2024: L'Alimentation</div>
         <Sujet
             heure = "9H00 - 11H00"
             img1Url = {img1Sujet1}

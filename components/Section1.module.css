@@ -1,0 +1,12 @@
+.section {
+ position: relative;
+   
+}
+
+.section img{
+    width: 100%;
+}
+.section h1 {
+    font-size: 5rem;
+   
+}
