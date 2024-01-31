@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: 16rem;
     gap: 4rem;
+    justify-content: center;
 }
 
 .card{
@@ -25,7 +26,7 @@
 
 .card img {
     width: 6rem;
-    height: auto;
+    height: 6rem;
     border-radius: 50%;
 }
 
@@ -92,7 +93,7 @@
     
     .card img {
         width: 8rem;
-        height: auto;
+        height: 8rem;
         border-radius: 50%;
     }
 }

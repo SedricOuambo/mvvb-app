@@ -42,26 +42,29 @@ export default function Bannierre() {
 
     return (
     <section className={styles.banner}>
-        <span>MVVB</span>  
-            <div className={styles.Chronometre}>
-                <div className={styles.decopmte}>
-                <div className={styles.time}>{time.days}:</div>
-                <div className={styles.label}>JOURS</div>
-                </div>
-                <div className={styles.decopmte}>
-                <div className={styles.time}>{time.hours}:</div>
-                <div className={styles.label}>HEURES</div>
-                </div>
-                <div className={styles.decopmte}>
-                <div className={styles.time}>{time.minutes}:</div>
-                <div className={styles.label}>MINUTES</div>
-                </div>
-                <div className={styles.decopmte}>
-                <div className={styles.time}>{time.seconds}</div>
-                <div className={styles.label}>SECONDES</div>
-                </div>
-            </div>
-            <p>Mieux Vivre et Vivre Bien</p>
+      <span>Prochaine Conférence dans :</span>  
+      <div className={styles.Chronometre}>
+        <div className={styles.sous__chrono}>
+          <div className={styles.decopmte}>
+            <div className={styles.time}>{time.days}:</div>
+            <div className={styles.label}>JOURS</div>
+          </div>
+          <div className={styles.decopmte}>
+            <div className={styles.time}>{time.hours}:</div>
+            <div className={styles.label}>HEURES</div>
+          </div>
+        </div>
+        <div className={styles.sous__chrono}>
+          <div className={styles.decopmte}>
+            <div className={styles.time}>{time.minutes}:</div>
+            <div className={styles.label}>MINUTES</div>
+          </div>
+          <div className={styles.decopmte}>
+            <div className={styles.time}>{time.seconds}</div>
+            <div className={styles.label}>SECONDES</div>
+          </div>
+        </div>
+      </div>
     </section>
     );
 }

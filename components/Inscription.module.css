@@ -1,5 +1,6 @@
 .form{
     display: grid;
+    justify-content: center;
 }
 
 .inscription__content{

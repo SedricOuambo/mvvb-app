@@ -1,7 +1,9 @@
 .grid{
-    display: grid;
-    grid-template-columns: 12rem;
-    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    /* display: grid;
+    grid-template-columns: 12rem; */
+    gap: .0rem;
     align-items: center;
 }
 
@@ -43,6 +45,8 @@
 /*****  LARGEUR SUPERIEURE a 568px et INFERIEURE a 768px  ****/
 @media screen and (min-width: 568px){
     .grid{
+        display: grid;
+        grid-template-columns: 12rem;
         grid-template-columns: repeat(2, 1fr);
     }
 }
