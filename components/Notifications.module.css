@@ -1,17 +1,17 @@
-.container p{
+.container p {
     color: var(--text-color);
     align-self: center;
 }
 
-.notifications_form{
+.notifications_form {
     display: flex;
     flex-direction: column;
     width: 100%;
     margin-top: 1rem;
 }
 
-.notifications_form input[type="text"], 
-.notifications_form input[type="submit"]{
+.notifications_form input[type="text"],
+.notifications_form input[type="submit"] {
     height: 3rem;
     font-family: var(--body-color);
     font-size: var(--normal-font-size);
@@ -20,7 +20,7 @@
     border-radius: 50px;
 }
 
-.notifications_form input[type="text"]{
+.notifications_form input[type="text"] {
     background-color: var(--input-color);
     color: var(--text-color);
     width: 100%;
@@ -28,7 +28,7 @@
     text-align: center;
 }
 
-.notifications_form input[type="submit"]{
+.notifications_form input[type="submit"] {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,7 +39,7 @@
     z-index: 10;
 }
 
-.notifications_form input[type="submit"]:hover{
+.notifications_form input[type="submit"]:hover {
     background-color: var(--first-color-alt);
     cursor: pointer;
 }
@@ -47,19 +47,19 @@
 /********** GESTION DES TAILLES D'ECRAN ************/
 
 /*****  LARGEUR SUPERIEURE a 568px*/
-@media screen and (min-width: 568px){
-    .notifications_form{
+@media screen and (min-width: 568px) {
+    .notifications_form {
         flex-direction: row;
         width: 90%;
         position: relative;
     }
 
-    .notifications_form input[type="text"]{
+    .notifications_form input[type="text"] {
         text-align: center;
         padding-right: 2.5rem;
     }
 
-    .notifications_form input[type="submit"]{
+    .notifications_form input[type="submit"] {
         position: absolute;
         margin-top: 0;
         right: -4rem;
@@ -67,8 +67,8 @@
 }
 
 /*****  LARGEUR SUPERIEURE a 1024px ****/
-@media screen and (min-width: 1024px){
-    .container{
+@media screen and (min-width: 1024px) {
+    .container {
         width: 70%;
     }
 }

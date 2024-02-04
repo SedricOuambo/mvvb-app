@@ -1,7 +1,10 @@
 'use client'
-import { useState } from "react";
 import styles from './Programme.module.css'
-export default function Programme({children, titre}) {
+/**
+ * Section Programme de l'evenement
+ * @returns 
+ */
+export default function Programme() {
     return <section className={styles.section}>
         <h1 className='title'> Programme</h1>
         <div className='container'>

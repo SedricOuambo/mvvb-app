@@ -1,4 +1,4 @@
-.nav{
+.nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -6,7 +6,7 @@
   padding-right: 1rem;
 }
 
-.nav ul{
+.nav ul {
   list-style-type: none;
 }
 
@@ -20,32 +20,32 @@
   color: var(--first-color-second);
 }
 
-.nav img{
+.nav img {
   width: 2rem;
   height: auto;
   margin-right: .5rem;
 }
 
-.nav__toggler div{
+.nav__toggler div {
   width: 2rem;
   height: 0.2rem;
   margin: .4rem;
   background-color: darkgray;
 }
 
-.nav__brand{
+.nav__brand {
   display: flex;
   align-items: center;
 }
 
-.nav__menu{
-  display:flex;
+.nav__menu {
+  display: flex;
   align-items: center;
   justify-content: space-around;
   margin-left: 1rem;
 }
 
-.nav__toggler{
+.nav__toggler {
   cursor: pointer;
   display: none;
   color: #fff;
@@ -59,17 +59,21 @@
   margin-top: 0.5rem;
 }
 
+.sub__menu_hiden {
+  display: none;
+}
+
 
 /********** GESTION DES TAILLES D'ECRAN ************/
-  
-/*****  LARGEUR INFERIEURES a 768px ****/
-@media screen and (max-width: 768px){
 
-  .nav__toggler{
+/*****  LARGEUR INFERIEURES a 768px ****/
+@media screen and (max-width: 768px) {
+
+  .nav__toggler {
     display: block;
   }
 
-  .nav__menu{
+  .nav__menu {
     position: fixed;
     top: 5rem;
     right: 0;
@@ -84,24 +88,24 @@
 }
 
 /*****  LARGEUR SUPERIEURE a 768px****/
-@media screen and (min-width: 768px){
-  .nav__menu{
+@media screen and (min-width: 768px) {
+  .nav__menu {
     gap: 1rem;
   }
 }
 
 /*****  LARGEUR SUPERIEURE a 768px****/
-@media screen and (min-width: 1024px){
-  .nav{
+@media screen and (min-width: 1024px) {
+  .nav {
     padding-right: 5rem;
   }
-  
-  .nav__menu{
+
+  .nav__menu {
     gap: 3rem;
   }
 }
 
 /*Nav Active Class*/
-.nav__active{
+.nav__active {
   transform: translateX(0);
 }

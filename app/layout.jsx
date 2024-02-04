@@ -1,5 +1,5 @@
 'use client'
-
+import Bannierre from '@/components/Bannierre'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Accueil from '@/components/Accueil'
@@ -18,6 +18,7 @@ export default function RootLayout({ children }) {
   return  <html lang="fr">
     <body className={inter.className + ' ' + styles.body}>
       <Header setPage={setPage}/>
+      <Bannierre/>
       <main className={styles.main}>
         {/*children*/}
         {page === 'accueil' ?

@@ -1,6 +1,6 @@
-.dayTitle{
+.dayTitle {
     font-size: var(--big-font-size);
     color: var(--title-color);
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
 }

@@ -1,11 +1,11 @@
-.grid{
+.grid {
     display: grid;
     grid-template-columns: 16rem;
     gap: 4rem;
     justify-content: center;
 }
 
-.card{
+.card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,7 +19,7 @@
     transition: .1s;
 }
 
-.card:hover{
+.card:hover {
     width: 16.5rem;
     height: 22.5rem;
 }
@@ -30,67 +30,67 @@
     border-radius: 50%;
 }
 
-.Intervenant_title{
+.Intervenant_title {
     display: flex;
     flex-direction: column;
     row-gap: 0.1rem;
     align-items: center;
 }
 
-.card h2{
+.card h2 {
     color: var(--first-color);
 }
 
-.card i{
+.card i {
     color: var(--first-color-second);
     font-size: 2rem;
 }
 
-.card i:hover{
+.card i:hover {
     color: var(--first-color-alt);
 }
 
-.Intervenant_social_media{
+.Intervenant_social_media {
     display: flex;
     gap: 1.5rem;
 }
 
 /********** GESTION DES TAILLES D'ECRAN ************/
-  
+
 /*****  LARGEUR SUPERIEURE a 568px et INFERIEURE a 768px  ****/
-@media screen and (min-width: 568px){
-    .grid{
+@media screen and (min-width: 568px) {
+    .grid {
         grid-template-columns: 15rem 15rem;
         gap: 1.5rem;
     }
 
-    .card{
+    .card {
         width: 15rem;
     }
 
-    .card:hover{
+    .card:hover {
         width: 16rem;
     }
 }
 
 /*****  LARGEUR SUPERIEURE a 1000px et INFERIEURE a 1200px ****/
-@media screen and (min-width: 1000px){
-    .card{
+@media screen and (min-width: 1000px) {
+    .card {
         gap: 2rem;
         width: 20rem;
         height: 25.5rem;
     }
 
-    .grid{
+    .grid {
         grid-template-columns: 20rem 20rem;
         gap: 2rem;
     }
 
-    .card:hover{
+    .card:hover {
         width: 20.5rem;
         height: 26rem;
     }
-    
+
     .card img {
         width: 8rem;
         height: 8rem;
@@ -99,10 +99,9 @@
 }
 
 /*****  LARGEUR SUPERIEURE a 1200px****/
-@media screen and (min-width: 1200px){
-    .grid{
+@media screen and (min-width: 1200px) {
+    .grid {
         grid-template-columns: 20rem 20rem 20rem;
         gap: 3rem;
     }
 }
-
