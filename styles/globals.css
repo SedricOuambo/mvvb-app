@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 /* Quelques styles personalisés */
-:root{
+:root {
   --header-height: 3rem;
 
   /****** Couleurs ******/
@@ -56,15 +56,15 @@
 }
 
 /****** Les tailles pour les grands ecrans *************/
-@media screen and (min-width: 968px){
-  :root{
-      --big-font-size: 3rem;
-      --h1-font-size: 2.25rem;
-      --h2-font-size: 1.5rem;
-      --h3-font-size: 1.25rem;
-      --normal-font-size: 1rem;
-      --small-font-size: .875rem;
-      --smaller-font-size: .813rem;
+@media screen and (min-width: 968px) {
+  :root {
+    --big-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
   }
 }
 
@@ -74,11 +74,13 @@ html {
   scroll-behavior: smooth;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
-body{
+body {
   margin: 0 0 var(--header-height) 0;
   font-family: var(--body-color);
   font-size: var(--normal-font-size);
@@ -86,16 +88,16 @@ body{
   color: var(--text-color);
 }
 
-h1, h2, h3, h4{
+h1,h2,h3,h4 {
   font-weight: var(--font-semi-bold);
   margin: 0 0;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
-section{
+section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -103,12 +105,12 @@ section{
   margin: 5rem 0;
 }
 
-.container{
+.container {
   padding: 2rem 0rem;
   max-width: 300px;
 }
 
-.title{
+.title {
   font-size: var(--big-font-size);
   color: var(--title-color);
 }
@@ -117,29 +119,29 @@ section{
 /********** GESTION DES TAILLES D'ECRAN ************/
 
 /*****  LARGEUR SUPERIEURE a 375px et INFERIEURE a 568px ****/
-@media screen and (min-width: 375px){
-  .container{
+@media screen and (min-width: 375px) {
+  .container {
     max-width: 320px;
   }
 }
 
 /*****  LARGEUR SUPERIEURE a 568px et INFERIEURE a 768px  ****/
-@media screen and (min-width: 568px){
-  .container{
+@media screen and (min-width: 568px) {
+  .container {
     max-width: 500px;
   }
 }
 
 /*****  LARGEUR SUPERIEURE a 768px et INFERIEURE a 1024px  ****/
-@media screen and (min-width: 768px){
-  .container{
+@media screen and (min-width: 768px) {
+  .container {
     max-width: 700px;
   }
 }
 
 /*****  LARGEUR SUPERIEURE a 1024px ****/
-@media screen and (min-width: 1024px){
-  .container{
+@media screen and (min-width: 1024px) {
+  .container {
     max-width: 1000px;
   }
 }

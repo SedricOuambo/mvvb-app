@@ -5,8 +5,8 @@
     width: 100%;
     padding-left: 1rem;
     height: 5rem;
-    background-color:var(--first-color);
-    z-index: var( --z-fixed);
+    background-color: var(--first-color);
+    z-index: var(--z-fixed);
 }
 
 .header h1 {

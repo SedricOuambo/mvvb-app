@@ -1,18 +1,18 @@
-.section2{
+.section2 {
     margin: 0 0;
 }
 
-.container{
+.container {
     display: flex;
     flex-direction: column;
     width: 700px;
 }
 
-.container div{
+.container div {
     margin-bottom: 1rem;
 }
 
-.contenu{
+.contenu {
     text-align: justify;
 }
 
@@ -22,19 +22,19 @@
     border-radius: 5px;
 }
 
-.heure{
+.heure {
     font-size: var(--h1-font-size);
     color: var(--title-color);
     margin: 0 0;
 }
 
-.titre{
+.titre {
     font-size: var(--h2-font-size);
     color: var(--title-color);
     margin: 0.5rem 0rem;
 }
 
-.separateur{
+.separateur {
     height: 0.1rem;
     width: 300px;
     background-color: var(--first-color-alt);
@@ -43,20 +43,20 @@
 /********** GESTION DES TAILLES D'ECRAN ************/
 
 /*****  LARGEUR SUPERIEURE a 375px et INFERIEURE a 568px ****/
-@media screen and (min-width: 375px){
-    .separateur{
+@media screen and (min-width: 375px) {
+    .separateur {
         width: 300px;
     }
 }
-  
+
 /*****  LARGEUR SUPERIEURE a 568px et INFERIEURE a 768px  ****/
-@media screen and (min-width: 568px){
-    .container{
+@media screen and (min-width: 568px) {
+    .container {
         flex-direction: row;
         gap: 0.5rem;
     }
 
-    .inverser{
+    .inverser {
         flex-direction: row-reverse;
     }
 
@@ -64,28 +64,29 @@
         width: 12rem;
     }
 
-    .separateur{
+    .separateur {
         width: 500px;
     }
 }
 
 /*****  LARGEUR SUPERIEURE a 768px et INFERIEURE a 1024px  ****/
-@media screen and (min-width: 768px){
-    .container{
+@media screen and (min-width: 768px) {
+    .container {
         gap: 1rem;
     }
+
     .container img {
         width: 20rem;
     }
 
-    .separateur{
+    .separateur {
         width: 700px;
     }
 }
 
 /*****  LARGEUR SUPERIEURE a 1024px ****/
-@media screen and (min-width: 1024px){
-    .container{
+@media screen and (min-width: 1024px) {
+    .container {
         width: 100%;
     }
 
@@ -93,7 +94,7 @@
         width: 25rem;
     }
 
-    .separateur{
+    .separateur {
         width: 1000px;
     }
 }

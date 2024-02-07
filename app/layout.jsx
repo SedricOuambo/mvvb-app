@@ -1,16 +1,16 @@
-'use client'
+'use client';
+import Bannierre from '@/components/Bannierre';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import Accueil from '@/components/Accueil';
+import Jour1 from '@/components/Jour1';
+import Jour2 from '@/components/Jour2';
+import { Inter } from 'next/font/google';
+import { useState } from 'react';
+import '@/styles/globals.css';
+import styles from './layout.module.css';
 
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-import Accueil from '@/components/Accueil'
-import Jour1 from '@/components/Jour1'
-import Jour2 from '@/components/Jour2'
-import { Inter } from 'next/font/google'
-import { useState } from 'react'
-import '@/styles/globals.css'
-import styles from './layout.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] });
 
 export default function RootLayout({ children }) {
   const [page, setPage] = useState('accueil');
@@ -18,6 +18,7 @@ export default function RootLayout({ children }) {
   return  <html lang="fr">
     <body className={inter.className + ' ' + styles.body}>
       <Header setPage={setPage}/>
+      <Bannierre/>
       <main className={styles.main}>
         {/*children*/}
         {page === 'accueil' ?
