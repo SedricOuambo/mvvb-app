@@ -1,5 +1,5 @@
-import MenuNav from './MenuNav'
-import styles from './Header.module.css'
+import MenuNav from './MenuNav';
+import styles from './Header.module.css';
 /**
  * Entete
  * @param {setPage} param0 

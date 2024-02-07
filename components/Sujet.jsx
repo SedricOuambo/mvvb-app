@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from './Sujet.module.css';
-import Slider from '@/components/Slider'
+import Slider from '@/components/Slider';
 /**
  * Utilise pour afficher les differents sujet d'un jour de l'evenement.
  * Chaque sujet contient 2 blocs (un pour les imgages qui defilent et un autre pour le contenu)

@@ -1,21 +1,21 @@
-import styles from './Jour1.module.css'
-import Sujet from './Sujet'
+import styles from './Jour1.module.css';
+import Sujet from './Sujet';
 
-import img1Sujet1 from '@/public/img/sujet1_1.jpg'
-import img2Sujet1 from '@/public/img/sujet1_2.jpg'
-import img3Sujet1 from '@/public/img/sujet1_3.jpg'
-import img1Sujet2 from '@/public/img/sujet2_1.jpg'
-import img2Sujet2 from '@/public/img/sujet2_2.jpg'
-import img3Sujet2 from '@/public/img/sujet2_3.jpg'
-import img1Sujet3 from '@/public/img/pause.jpeg'
-import img2Sujet3 from '@/public/img/pause2.jpeg'
-import img3Sujet3 from '@/public/img/pause3.jpeg'
-import img1Sujet4 from '@/public/img/physique1.jpeg'
-import img2Sujet4 from '@/public/img/physique2.jpeg'
-import img3Sujet4 from '@/public/img/physique3.png'
-import img1Sujet5 from '@/public/img/physique4.jpeg'
-import img2Sujet5 from '@/public/img/physique5.jpeg'
-import img3Sujet5 from '@/public/img/physique6.jpeg'
+import img1Sujet1 from '@/public/img/sujet1_1.jpg';
+import img2Sujet1 from '@/public/img/sujet1_2.jpg';
+import img3Sujet1 from '@/public/img/sujet1_3.jpg';
+import img1Sujet2 from '@/public/img/sujet2_1.jpg';
+import img2Sujet2 from '@/public/img/sujet2_2.jpg';
+import img3Sujet2 from '@/public/img/sujet2_3.jpg';
+import img1Sujet3 from '@/public/img/pause.jpeg';
+import img2Sujet3 from '@/public/img/pause2.jpeg';
+import img3Sujet3 from '@/public/img/pause3.jpeg';
+import img1Sujet4 from '@/public/img/physique1.jpeg';
+import img2Sujet4 from '@/public/img/physique2.jpeg';
+import img3Sujet4 from '@/public/img/physique3.png';
+import img1Sujet5 from '@/public/img/physique4.jpeg';
+import img2Sujet5 from '@/public/img/physique5.jpeg';
+import img3Sujet5 from '@/public/img/physique6.jpeg';
 
 /**
  * Page du contenu de la premiere journee de l'evenement

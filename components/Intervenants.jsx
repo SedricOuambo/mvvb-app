@@ -2,8 +2,8 @@ import styles from './Intervenants.module.css'
 import Image from 'next/image'
 import sedric_photo from '@/public/img/Sedric.png'
 import otniel_photo from '@/public/img/Otniel.jpg'
-import gladice_photo from '@/public/img/Gladice.png'
-import invite_photo from '@/public/img/Invite.png'
+import gladice_photo from '@/public/img/Gladice.png';
+import invite_photo from '@/public/img/Invite.png';
 /**
  * 
  * @returns Section des intervenants

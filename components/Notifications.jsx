@@ -1,4 +1,4 @@
-import styles from './Notifications.module.css'
+import styles from './Notifications.module.css';
 
 /**
  * Setion des notifications

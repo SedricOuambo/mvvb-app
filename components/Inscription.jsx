@@ -1,4 +1,4 @@
-import styles from './Inscription.module.css'
+import styles from './Inscription.module.css';
 /**
  * Section inscription
  * @returns Section inscription

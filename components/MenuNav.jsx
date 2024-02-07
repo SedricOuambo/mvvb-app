@@ -1,10 +1,10 @@
-'use client'
+'use client';
 import { useState } from 'react';
-import Image from 'next/image'
-import styles from './MenuNav.module.css'
-import logo from '@/public/img/logo.jpg'
-import { FaBars } from "react-icons/fa"
-import { BiTrash } from "react-icons/bi"
+import Image from 'next/image';
+import styles from './MenuNav.module.css';
+import logo from '@/public/img/logo.jpg';
+import { FaBars } from "react-icons/fa";
+import { BiTrash } from "react-icons/bi";
 
 /**
  * Gestion du Menu 

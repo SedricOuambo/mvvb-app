@@ -1,18 +1,18 @@
-import styles from './Jour2.module.css'
-import Sujet from './Sujet'
+import styles from './Jour2.module.css';
+import Sujet from './Sujet';
 
-import robu1 from '@/public/img/jour2img/sujet1img/robu1.jpg'
-import robu2 from '@/public/img/jour2img/sujet1img/robu2.jpg'
-import cons1 from '@/public/img/jour2img/sujet2img/cons1.png'
-import cons2 from '@/public/img/jour2img/sujet2img/cons2.jpg'
-import cons3 from '@/public/img/jour2img/sujet2img/cons3.jpeg'
-import pause1 from '@/public/img/jour2img/pause/pause1.jpeg'
-import pause2 from '@/public/img/jour2img/pause/pause2.jpg'
-import pause3 from '@/public/img/jour2img/pause/pause3.jpeg'
-import stress1 from '@/public/img/jour2img/sujet3img/stress1.jpg'
-import repos1 from '@/public/img/jour2img/sujet4img/repos1.jpeg'
-import repos2 from '@/public/img/jour2img/sujet4img/repos2.jpeg'
-import repos3 from '@/public/img/jour2img/sujet4img/repos3.jpeg'
+import robu1 from '@/public/img/jour2img/sujet1img/robu1.jpg';
+import robu2 from '@/public/img/jour2img/sujet1img/robu2.jpg';
+import cons1 from '@/public/img/jour2img/sujet2img/cons1.png';
+import cons2 from '@/public/img/jour2img/sujet2img/cons2.jpg';
+import cons3 from '@/public/img/jour2img/sujet2img/cons3.jpeg';
+import pause1 from '@/public/img/jour2img/pause/pause1.jpeg';
+import pause2 from '@/public/img/jour2img/pause/pause2.jpg';
+import pause3 from '@/public/img/jour2img/pause/pause3.jpeg';
+import stress1 from '@/public/img/jour2img/sujet3img/stress1.jpg';
+import repos1 from '@/public/img/jour2img/sujet4img/repos1.jpeg';
+import repos2 from '@/public/img/jour2img/sujet4img/repos2.jpeg';
+import repos3 from '@/public/img/jour2img/sujet4img/repos3.jpeg';
 /**
  * Page du contenu de la deuxieme journee de l'evenement
  * @returns jour2

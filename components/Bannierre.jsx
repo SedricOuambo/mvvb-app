@@ -1,6 +1,6 @@
-'use client'
+'use client';
 import { useState, useEffect } from 'react';
-import styles from './Bannierre.module.css'
+import styles from './Bannierre.module.css';
 
 /**
  * Elle contient l'image baniere et le compte a rebours

@@ -1,5 +1,5 @@
-import { FaCalendarAlt, FaClock, FaLocationArrow } from "react-icons/fa"
-import styles from './Horaire.module.css'
+import { FaCalendarAlt, FaClock, FaLocationArrow } from "react-icons/fa";
+import styles from './Horaire.module.css';
 /**
  * Section Horaire et adresse
  * @returns Section Horaire et adresse

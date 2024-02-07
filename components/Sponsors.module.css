@@ -1,0 +1,24 @@
+.container__sponsors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+.container__sponsors img{
+    width: 5rem;
+    height: auto;
+}
+
+/*****  LARGEUR SUPERIEURE a 1024px ****/
+@media screen and (min-width: 1024px) {
+    .container__sponsors {
+        gap: 4rem;
+    }
+
+    .container__sponsors img{
+        width: 15rem;
+    }
+}

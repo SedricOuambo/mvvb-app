@@ -1,6 +1,6 @@
 .grid {
     display: grid;
-    grid-template-columns: 16rem;
+    grid-template-columns: 18rem;
     gap: 4rem;
     justify-content: center;
 }
@@ -11,8 +11,8 @@
     align-items: center;
     gap: 1.5rem;
     padding: 1.5rem;
-    width: 16rem;
-    height: 22rem;
+    width: 16.5rem;
+    height: 22.5rem;
     background-color: white;
     border-radius: 10px;
     box-shadow: 10px 10px 5px #aaaaaa;

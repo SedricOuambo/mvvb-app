@@ -1,15 +1,12 @@
-import styles from './Presentation.module.css'
+import styles from './Presentation.module.css';
 /**
  * Section Presentation de l'evenement
  * @returns Section Presentation de l'evenement
  */
 export default function Presentation() {
     return <section className={styles.section}>
-        <h1 className='title'> Présentation</h1>
+        <h1 className='title'> C'est quoi MVVB?</h1>
         <div className='container'>
-            <span>
-                C'est quoi MVVB?
-            </span>
             <p>
                 Le plus grand événement de l'année est presque arrivé. Comme le veut la tradition, nous organisons de
                 nouveau mvvb pour rassembler et sensibiliser nos invites sur comment Mieux Vivre․ c’est un lieu idéal

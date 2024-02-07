@@ -1,5 +1,5 @@
-'use client'
-import styles from './Programme.module.css'
+'use client';
+import styles from './Programme.module.css';
 /**
  * Section Programme de l'evenement
  * @returns 
