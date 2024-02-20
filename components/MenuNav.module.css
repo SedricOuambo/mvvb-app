@@ -1,20 +1,9 @@
-<<<<<<< HEAD
-.nav{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-right: 2rem;
-  height: 5rem;
-  width: 100%;
-  margin: 0 .5rem;
-=======
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 100%;
   padding-right: 1rem;
->>>>>>> 6d5ab458faa20819afcc195f99fe1dfa27c8d09f
 }
 
 .nav ul {
