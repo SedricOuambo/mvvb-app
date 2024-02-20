@@ -12,13 +12,13 @@
   list-style-type: none;
 }
 
-.nav a {
+.nav a, .program {
   color: white;
   position: relative;
   text-decoration: none;
 }
 
-.nav a:hover {
+.nav a:hover, .program:hover {
   color: var(--first-color-second);
 }
 
