@@ -1,4 +1,4 @@
-import styles from './Contact.module.css';
+import styles from './Contact2.module.css';
 /**
  * Formulaire pour contacter
  * @returns Section Contact
