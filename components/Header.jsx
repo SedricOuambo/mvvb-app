@@ -5,8 +5,8 @@ import styles from './Header.module.css';
  * @param {setPage} param0 
  * @returns 
  */
-export default function Header({ setPage }) {
+export default function Header() {
     return <header className={styles.header}>
-        <MenuNav setPage={setPage} />
+        <MenuNav/>
     </header>
 }

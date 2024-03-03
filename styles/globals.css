@@ -88,7 +88,10 @@ body {
   color: var(--text-color);
 }
 
-h1,h2,h3,h4 {
+h1,
+h2,
+h3,
+h4 {
   font-weight: var(--font-semi-bold);
   margin: 0 0;
 }
@@ -119,9 +122,9 @@ section {
 /********** GESTION DES TAILLES D'ECRAN ************/
 
 /*****  LARGEUR SUPERIEURE a 375px et INFERIEURE a 568px ****/
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 360px) {
   .container {
-    max-width: 320px;
+    max-width: 300px;
   }
 }
 

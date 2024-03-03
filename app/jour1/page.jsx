@@ -1,5 +1,5 @@
-import styles from './Jour1.module.css';
-import Sujet from './Sujet';
+import styles from '@/components/Jour1.module.css';
+import Sujet from '../../components/Sujet';
 
 import img1Sujet1 from '@/public/img/sujet1_1.jpg';
 import img2Sujet1 from '@/public/img/sujet1_2.jpg';

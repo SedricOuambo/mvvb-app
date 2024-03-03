@@ -15,7 +15,7 @@ export default function Bannierre() {
   });
 
   useEffect(() => {
-    const eventDate = new Date('2024-02-12T23:59:59');
+    const eventDate = new Date('2024-04-23T23:59:59');
 
     const updateCountdown = () => {
       const currentDate = new Date();

@@ -1,5 +1,7 @@
+'use client'
 import Carousel from 'react-bootstrap/Carousel';
 import Image from 'next/image';
+import { use } from 'react';
 /**
  * Component cree pour utiliser la Carousel de bootstrap afin de faire defiler les images
  * @param {*} props 
