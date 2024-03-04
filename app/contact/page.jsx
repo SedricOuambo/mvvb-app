@@ -55,11 +55,26 @@ export default function Contact() {
                         <p className={styles.title}>Envoyer un email</p>
                         <p className={styles.subtitle}>Nous reviendrons vers vous dans les brefs delais. Promis!</p>
 
-                        <div><input type="text" name="name" placeholder='Votre nom' /></div>
-                        <div><input type="email" name="email" placeholder='Votre email' /></div>
-                        <div><input type="tel" name="phone" placeholder='Votre N° de téléphone' /> </div>
-                        <div><input type="text" name="object" placeholder='Objet de votre message' /> </div>
-                        <div><textarea name="message" placeholder='Votre message'></textarea></div>
+                        <div><input type="text" name="name" placeholder='Votre nom' />
+                            {erreurname &&
+                                <div>{erreurname}</div>
+                            }</div>
+                        <div><input type="email" name="email" placeholder='Votre email' />
+                            {erreuremail &&
+                                <div>{erreuremail}</div>
+                            }</div>
+                        <div><input type="tel" name="phone" placeholder='Votre N° de téléphone' />
+                            {erreurphone &&
+                                <div>{erreurphone}</div>
+                            } </div>
+                        <div><input type="text" name="object" placeholder='Objet de votre message' />
+                            {erreurobject &&
+                                <div>{erreurobject}</div>
+                            } </div>
+                        <div><textarea name="message" placeholder='Votre message'></textarea>
+                            {erreurmessage &&
+                                <div>{erreurmessage}</div>
+                            }</div>
                         <div className={styles.btn_bloc}>
                             <input type="reset" value="Effacer" className={styles.button + ' ' + styles.btn} />
                             <input type="submit" value="Envoyer" className={styles.button + ' ' + styles.btn} />
