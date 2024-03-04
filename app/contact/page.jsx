@@ -1,3 +1,5 @@
+'use client'
+import { useState } from 'react';
 import styles from '@/components/Contact.module.css';
 import { FaInstagram, FaFacebookF, FaBlenderPhone, FaWhatsapp, FaTwitter } from "react-icons/fa";
 import Image from 'next/image';
@@ -7,10 +9,71 @@ import Image from 'next/image';
  * @returns Contact
  */
 export default function Contact() {
+    const [erreurname, setErreurName] = useState('');
+    const [erreuremail, setErreurEmail] = useState('');
+    const [erreurphone, setErreurPhone] = useState('');
+    const [erreurmessage, setErreurMessage] = useState('');
+    const [erreurobject, setErreurObject] = useState('');
+    const [envoiReussi, setEnvoiReussi] = useState(false);
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneRegex = /^\d{10}$/;
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        const form = event.target;
+        const formData = new FormData(form);
+
+        let erreur = false;
+        if (!formData.get('name') || formData.get('name').length < 8) {
+            setErreurName('Le nom d\'utilisateur est invalide');
+            erreur = true;
+        }
+        else {
+            setErreurName('');
+        }
+
+        if (!formData.get('email') || !emailRegex.test(formData.get('email'))) {
+            setErreurEmail('L\'adresse email est invalide');
+            erreur = true;
+        }
+        else {
+            setErreurEmail('');
+        }
+
+        if (!formData.get('phone') || !phoneRegex.test(formData.get('phone'))) {
+            setErreurPhone('Le numéro de téléphone est invalide');
+            erreur = true;
+        } else {
+            setErreurPhone('');
+        }
+
+        if (!formData.get('object')) {
+            setErreurObject('Veuillez spécifier l\'objet de votre message');
+            erreur = true;
+        }
+        else {
+            setErreurObject('');
+        }
+
+        if (!formData.get('message')) {
+            setErreurMessage('Veuillez écrire un message');
+            erreur = true;
+        }
+        else {
+            setErreurMessage('');
+        }
+
+        if (erreur) {
+            return;
+        }
+
+        // Écrire code de soumission
+        setEnvoiReussi(true);
+    }
 
 
 
-    
     return <>
         <div className={styles.container__contact}>
             <div className={styles.form__info}>
@@ -51,7 +114,7 @@ export default function Contact() {
                     <span className={styles.circle + ' ' + styles.one}></span>
                     <span className={styles.circle + ' ' + styles.two}></span>
 
-                    <form action="">
+                    <form onSubmit={handleSubmit}>
                         <p className={styles.title}>Envoyer un email</p>
                         <p className={styles.subtitle}>Nous reviendrons vers vous dans les brefs delais. Promis!</p>
 
@@ -78,6 +141,11 @@ export default function Contact() {
                         <div className={styles.btn_bloc}>
                             <input type="reset" value="Effacer" className={styles.button + ' ' + styles.btn} />
                             <input type="submit" value="Envoyer" className={styles.button + ' ' + styles.btn} />
+                            {envoiReussi &&
+                                <div>
+                                    Vous êtes connecté avec succès
+                                </div>
+                            }
                         </div>
                     </form>
                 </div>
