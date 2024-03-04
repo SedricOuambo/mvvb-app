@@ -53,10 +53,8 @@ export default function Jour2() {
         "on peut apprendre non pas seulement à se reposer plus, mais mieux!";
 
     return <>
-        {/* Appel du component Sujet pour ajouter les differents sujets du jour1 */}
-        <section>
-            <div className={styles.dayTitle}>Journée du 13 Février 2024: Comprendre la Psychologie Humaine</div>
-        </section>
+        {/* Appel du component Sujet pour ajouter les differents sujets du jour2 */}
+        <div className={styles.dayTitle}>Journée du 13 Février 2024: Comprendre la Psychologie Humaine</div>
         <Sujet
             heure="9H00 - 11H00"
             img1Url={robu1}

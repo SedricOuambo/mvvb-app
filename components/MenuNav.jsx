@@ -27,10 +27,10 @@ export default function MenuNav() {
     const jour2Click = () => { ProgramsClick(); }           //Gestion du clic pour afficher le jour2
 
     return <nav className={styles.nav}>
-        <a href="#" className={styles.nav__brand}>
+        <Link href="/" className={styles.nav__brand}>
             <Image src={logo} alt="Logo mvvb" />
             <h1>MVVB</h1>
-        </a>
+        </Link>
         <div className={styles.nav__menu + ' ' + (active && styles.nav__active)}>
             <div><Link href="/" className={styles.nav__link}> Accueil </Link></div>
             <div><Link href="#">Anciens Evenements</Link></div>
@@ -46,7 +46,7 @@ export default function MenuNav() {
                     <Link href="/jour2" onClick={jour2Click}>Jour 2</Link>
                 </div>
             </div>
-            <div><Link href="#">Contact</Link></div>
+            <div><Link href="/contact">Contact</Link></div>
             <div><Link href="#">Inscription</Link></div>
         </div>
         <div onClick={navToggle} className={styles.nav__toggler}>{toggleIcon ? <BiTrash /> : <FaBars />}</div>

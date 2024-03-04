@@ -18,8 +18,6 @@ export default function Accueil() {
     <Programme />
     <Intervenants />
     <Sponsors />
-    <Inscription />
-    <Contact />
     <Notifications />
   </>
 }

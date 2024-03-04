@@ -13,7 +13,7 @@
     padding: 1.5rem;
     width: 16.5rem;
     height: 22.5rem;
-    background-color: white;
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: 10px 10px 5px #aaaaaa;
     transition: .1s;
@@ -55,6 +55,12 @@
     gap: 1.5rem;
 }
 
+.icon {
+    font-size: 2rem;
+    color: var(--first-color-alt);
+    margin-right: var(--mb-0-75);
+}
+
 /********** GESTION DES TAILLES D'ECRAN ************/
 
 /*****  LARGEUR SUPERIEURE a 568px et INFERIEURE a 768px  ****/
@@ -66,10 +72,12 @@
 
     .card {
         width: 15rem;
+        height: 27rem;
     }
 
     .card:hover {
         width: 16rem;
+        height: 27.5rem;
     }
 }
 
@@ -78,7 +86,7 @@
     .card {
         gap: 2rem;
         width: 20rem;
-        height: 25.5rem;
+        height: 28rem;
     }
 
     .grid {
@@ -88,7 +96,7 @@
 
     .card:hover {
         width: 20.5rem;
-        height: 26rem;
+        height: 28.5rem;
     }
 
     .card img {

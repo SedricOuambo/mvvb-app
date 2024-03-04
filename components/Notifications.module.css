@@ -69,6 +69,6 @@
 /*****  LARGEUR SUPERIEURE a 1024px ****/
 @media screen and (min-width: 1024px) {
     .container {
-        width: 70%;
+        width: 50%;
     }
 }

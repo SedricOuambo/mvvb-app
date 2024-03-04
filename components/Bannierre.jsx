@@ -15,7 +15,7 @@ export default function Bannierre() {
   });
 
   useEffect(() => {
-    const eventDate = new Date('2024-04-23T23:59:59');
+    const eventDate = new Date('2024-05-12T23:59:59');
 
     const updateCountdown = () => {
       const currentDate = new Date();
@@ -33,7 +33,6 @@ export default function Bannierre() {
         seconds: formatTime(seconds),
       });
     };
-
     const formatTime = (value) => (value < 10 ? `0${value}` : value);
     // Mettre à jour le chronomètre toutes les secondes
     const intervalId = setInterval(updateCountdown, 1000);
