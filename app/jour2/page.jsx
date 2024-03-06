@@ -18,7 +18,7 @@ import repos3 from '@/public/img/jour2img/sujet4img/repos3.jpeg';
  * @type {import('next').Metadata}
  */
 export const metadata ={
-    title:'Jour2 Conference',
+    title:'Comprendre la Psychologie humaine',
     description:'Presentation des evennement de notre deuxieme jour de conference',
     openGraph: {
         title: 'Jour2 Conference',

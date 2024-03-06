@@ -1,4 +1,4 @@
-'use client';
+
 import Bannierre from '@/components/Bannierre';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -13,7 +13,7 @@ const inter = Inter({ subsets: ['latin'] });
  */
 export const metadata ={
   title:'Bienvenue sur MVVB',
-  description:'Mieu Vivre Et Vivre Bien',
+  description:'Mieux Vivre Et Vivre Bien',
 }
 
 export default function RootLayout({ children }) {

@@ -1,71 +1,174 @@
-import styles from './Contact2.module.css';
+'use client'
+//import styles from './Contact2.module.css';
+import { useState } from 'react';
+import styles from '@/components/Contact.module.css';
+import { FaInstagram, FaFacebookF, FaBlenderPhone, FaWhatsapp, FaTwitter } from "react-icons/fa";
+import emailjs from "@emailjs/browser";
+import Link from 'next/link';
+
+
+
 /**
- * Formulaire pour contacter
- * @returns Section Contact
+ * Fonction permettant d'envoyer un mail via EmailJS
+ * @param {formData contenant les valeurs de tous les champs} formData 
+ */
+const sendEmail = (formData) => {
+    const infos_results = document.getElementById('infos_results');
+    const subject = document.getElementById('subject');
+    const message = document.getElementById('message')
+
+    const templateParams = {
+        name: formData.get('name'),
+        subject: formData.get('object'),
+        email: formData.get('email'),
+        message: formData.get('message'),
+    }
+
+    emailjs.send(
+        'service_e8l5qhh',      //SERVICE ID
+        'template_2gzcyss',     //TEMPLATE ID
+        templateParams,
+        'XI68Lm3ggbss3OTpx'     //USER PUBLIC KEY
+    ).then(
+        (response) => {
+            infos_results.style.color = 'green';
+            infos_results.textContent = 'Votre message a été envoyé avec succès. Nous vous reviendrons très bientôt.'
+            //Linkpres l'envoi du mail, on efface les champs objets et message
+            //Pour empecher les envois repetitifs par simple clic
+            subject.value = "";
+            message.value = "";
+        },
+        (error) => {
+            infos_results.style.color = 'red';
+            infos_results.textContent = 'Message non envoyé.'
+        }
+    );
+}
+
+/**
+ * Page du contenu de la page de contact
+ * @returns Contact
  */
 export default function Contact() {
-    return <section className={styles.section}>
-        <h1 className='title'> Contactez nous!</h1>
-        <div className={styles.grid + ' ' + styles.contact__container + ' ' + 'container'}>
-            <div className={styles.contact__information_content}>
-                <div className={styles.contact__information}>
-                    <Link href="tel:+18999999999" target="_blank" className={styles.contact__information}>
-                        <i className={styles.contact__icon + ' ' + 'uil uil-phone'}></i>
-                        <div>
-                            <h3 className={styles.contact__title + ' ' + styles.call__me}>Appel</h3>
-                            <span className={styles.contact__subtitle}>+1 899-99-9999</span>
-                        </div>
-                    </Link>
-                </div>
+    const [erreurname, setErreurName] = useState('');
+    const [erreuremail, setErreurEmail] = useState('');
+    const [erreurphone, setErreurPhone] = useState('');
+    const [erreurmessage, setErreurMessage] = useState('');
+    const [erreurobject, setErreurObject] = useState('');
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneRegex = /^\d{10}$/;
 
-                <div className={styles.contact__information}>
-                    <Link href="mailto:mvvb-app@gmail.com" target="_blank" className={styles.contact__information}>
-                        <i className={styles.contact__icon + ' ' + 'uil uil-envelope'}></i>
-                        <div>
-                            <h3 className={styles.contact__title + ' ' + styles.email}>Courriel</h3>
-                            <span className={styles.contact__subtitle}>mvvb-app@gmail.com</span>
-                        </div>
-                    </Link>
-                </div>
+    const handleSubmit = (event) => {
+        event.preventDefault();
 
-                <div className={styles.contact__information}>
-                    <Link href="https://wa.me/+1 899-99-9999" target="_blank" className={styles.contact__information}>
-                        <i className={styles.contact__icon + ' ' + 'uil uil-whatsapp'}></i>
-                        <div>
-                            <h3 className={styles.contact__title}>Whatsapp</h3>
-                        </div>
-                    </Link>
-                </div>
+        const form = event.target;
+        const formData = new FormData(form);
 
-                <div className={styles.contact__information}>
-                    <i className={styles.contact__icon + ' ' + 'uil-map-marker'}></i>
-                    <div>
-                        <h3 className={styles.contact__title + ' ' + styles.email}>Adresse</h3>
-                        <span className={styles.contact__subtitle}>1240 Avenue Mvvb</span>
+        let erreur = false;
+        if (!formData.get('name')) {
+            setErreurName('Veuillez remplir ce champ');
+            erreur = true;
+        }
+        else { setErreurName(''); }
+
+        if (!formData.get('email') || !emailRegex.test(formData.get('email'))) {
+            setErreurEmail('L\'adresse email est invalide');
+            erreur = true;
+        }
+        else { setErreurEmail(''); }
+
+        if (!formData.get('phone') || !phoneRegex.test(formData.get('phone'))) {
+            setErreurPhone('Le numéro de téléphone est invalide');
+            erreur = true;
+        } else { setErreurPhone(''); }
+
+        if (!formData.get('object')) {
+            setErreurObject('Veuillez spécifier l\'objet de votre message');
+            erreur = true;
+        }
+        else { setErreurObject(''); }
+
+        if (!formData.get('message')) {
+            setErreurMessage('Veuillez écrire un message');
+            erreur = true;
+        }
+        else { setErreurMessage(''); }
+
+        //S'il n'y a pas d'erreur, on envoie le mail
+        if (!erreur) { sendEmail(formData); }
+    }
+
+    return <>
+        <div className={styles.container__contact}>
+            <div className={styles.form__info}>
+                <div className={styles.contact_info_contact}>
+                    <h3 className={styles.title}>On reste en contact?</h3>
+                    <p className={styles.text}>
+                        Vous souhaitez nous contactez, avoir davantages d&apos;informations
+                        sur Entraide App ou tout simplement papoter, Nous sommes joignables
+                        par téléphone, WhatsApp ou email.
+                    </p>
+
+                    <div className={styles.info}>
+                        <div className={styles.information}>
+                            <Link href="tel:+18193199747" target="_blank" className={styles.contact__information}>
+                                <FaBlenderPhone className={styles.icon} />
+                                <h3>+18999999999</h3>
+                            </Link>
+                        </div>
+                        <div className={styles.information}>
+                            <Link href="https://wa.me/+18999999999" target="_blank" className={styles.contact__information}>
+                                <FaWhatsapp className={styles.icon} />
+                                <h3>Whatsapp</h3>
+                            </Link>
+                        </div>
                     </div>
+
+                    <div className={styles.social__media}>
+                        <p>Nous sommes aussi ici:</p>
+                        <div className={styles.social_icons_container}>
+                            <Link href="#" target="_blank"> <FaFacebookF className={styles.icon} /> </Link>
+                            <Link href="#" target="_blank"> <FaTwitter className={styles.icon} /></Link>
+                            <Link href="#" target="_blank"><FaInstagram className={styles.icon} /></Link>
+                        </div>
+                    </div>
+                </div>
+
+                <div className={styles.contact_form}>
+                    <span className={styles.circle + ' ' + styles.one}></span>
+                    <span className={styles.circle + ' ' + styles.two}></span>
+
+                    <form onSubmit={handleSubmit}>
+                        <p className={styles.title}>Envoyer un email</p>
+                        <p className={styles.subtitle}>Nous reviendrons vers vous dans les brefs delais. Promis!</p>
+
+                        <div>
+                            <input type="text" name="name" placeholder='Votre nom' />
+                            {erreurname && <span>{erreurname}</span>}
+                        </div>
+                        <div>
+                            <input type="text" name="email" placeholder='Votre email' />
+                            {erreuremail && <span>{erreuremail}</span>}
+                        </div>
+                        <div>
+                            <input type="tel" name="phone" placeholder='Votre N° de téléphone' />
+                            {erreurphone && <span>{erreurphone}</span>}</div>
+                        <div>
+                            <input type="text" name="object" placeholder='Objet de votre message' id='subject' />
+                            {erreurobject && <span>{erreurobject}</span>}
+                        </div>
+                        <div>
+                            <textarea name="message" placeholder='Votre message' id='message'></textarea>
+                            {erreurmessage && <span>{erreurmessage}</span>}
+                        </div>
+                        <div className={styles.btn_bloc}>
+                            <input type="reset" value="Effacer" className={styles.button + ' ' + styles.btn} />
+                            <input type="submit" value="Envoyer" className={styles.button + ' ' + styles.btn} />
+                        </div>
+                        <div id='infos_results' className={styles.infos_results}></div>
+                    </form>
                 </div>
             </div>
-
-            <form className={styles.grid}>
-                <div className={styles.grid + ' ' + styles.contact__inputs}>
-                    <div className={styles.contact__content}>
-                        <label className={styles.contact__label + ' ' + styles.input__name}>Nom</label>
-                        <input type="text" className={styles.contact__input} />
-                    </div>
-                    <div className={styles.contact__content}>
-                        <label className={styles.contact__label + ' ' + styles.input__email}>Email</label>
-                        <input type="email" className={styles.contact__input} />
-                    </div>
-                </div>
-                <div className={styles.contact__content + ' ' + styles.contact__form}>
-                    <label className={styles.contact__label}>Message</label>
-                    <textarea name="" id="" cols="0" rows="7" className={styles.contact__input}></textarea>
-                </div>
-
-                <div>
-                    <input type="submit" value="Envoyer message" className={styles.button + ' ' + styles.button__flex} />
-                </div>
-            </form>
         </div>
-    </section>
+    </>
 }

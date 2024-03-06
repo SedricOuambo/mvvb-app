@@ -21,7 +21,7 @@ import img3Sujet5 from '@/public/img/physique6.jpeg';
  * @type {import('next').Metadata}
  */
 export const metadata ={
-    title:'Jour1 Conference',
+    title:'L\'alimentation',
     description:'Presentation des evennement de notre premier jour de conference',
     openGraph: {
         title: 'Jour1 Conference',
@@ -64,7 +64,7 @@ export default function Jour1() {
 
     return <>
         {/* Appel du component Sujet pour ajouter les differents sujets du jour1 */}
-        <div className={styles.dayTitle}>Journée du 12 Février 2024: L'Alimentation</div>
+        <div className={styles.dayTitle}>Journée du 12 Février 2024: L&apos;Alimentation</div>
         <Sujet
             heure="9H00 - 11H00"
             img1Url={img1Sujet1}

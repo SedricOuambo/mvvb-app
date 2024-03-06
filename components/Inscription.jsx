@@ -28,7 +28,7 @@ export default function Inscription() {
                     </div>
                 </div>
                 <div>
-                    <p>Veuillez selectionner ce qui s'applique a vous :</p>
+                    <p>Veuillez selectionner ce qui s&apos;applique a vous :</p>
                     <div className={styles.inscription__choix}>
                         <div className={styles.inscription__choixcomposants}>
                             <input type="checkbox" />
