@@ -3,6 +3,7 @@ import { useState } from 'react';
 import styles from '@/components/Contact.module.css';
 import { FaInstagram, FaFacebookF, FaBlenderPhone, FaWhatsapp, FaTwitter } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
+import Link from 'next/link';
 
 /**
  * @type {import('next').Metadata}
@@ -42,7 +43,7 @@ const sendEmail = (formData) => {
         (response) => {
             infos_results.style.color = 'green';
             infos_results.textContent = 'Votre message a été envoyé avec succès. Nous vous reviendrons très bientôt.'
-            //Apres l'envoi du mail, on efface les champs objets et message
+            //Linkpres l'envoi du mail, on efface les champs objets et message
             //Pour empecher les envois repetitifs par simple clic
             subject.value = "";
             message.value = "";
@@ -105,7 +106,6 @@ export default function Contact() {
 
         //S'il n'y a pas d'erreur, on envoie le mail
         if (!erreur) { sendEmail(formData); }
-        else { return; }
     }
 
     return <>
@@ -121,25 +121,25 @@ export default function Contact() {
 
                     <div className={styles.info}>
                         <div className={styles.information}>
-                            <a href="tel:+18193199747" target="_blank" className={styles.contact__information}>
+                            <Link href="tel:+18193199747" target="_blank" className={styles.contact__information}>
                                 <FaBlenderPhone className={styles.icon} />
                                 <h3>+18999999999</h3>
-                            </a>
+                            </Link>
                         </div>
                         <div className={styles.information}>
-                            <a href="https://wa.me/+18999999999" target="_blank" className={styles.contact__information}>
+                            <Link href="https://wa.me/+18999999999" target="_blank" className={styles.contact__information}>
                                 <FaWhatsapp className={styles.icon} />
                                 <h3>Whatsapp</h3>
-                            </a>
+                            </Link>
                         </div>
                     </div>
 
                     <div className={styles.social__media}>
                         <p>Nous sommes aussi ici:</p>
                         <div className={styles.social_icons_container}>
-                            <a href="#"> <FaFacebookF className={styles.icon} /> </a>
-                            <a href="#"> <FaTwitter className={styles.icon} /></a>
-                            <a href="#"><FaInstagram className={styles.icon} /></a>
+                            <Link href="#" target="_blank"> <FaFacebookF className={styles.icon} /> </Link>
+                            <Link href="#" target="_blank"> <FaTwitter className={styles.icon} /></Link>
+                            <Link href="#" target="_blank"><FaInstagram className={styles.icon} /></Link>
                         </div>
                     </div>
                 </div>

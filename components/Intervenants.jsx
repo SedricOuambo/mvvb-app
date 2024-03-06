@@ -2,11 +2,12 @@
 import { FaInstagram, FaFacebookF, FaTwitter } from "react-icons/fa";
 import styles from './Intervenants.module.css'
 import Image from 'next/image'
-import { useEffect } from "react";
 import sedric_photo from '@/public/img/Sedric.png'
 import otniel_photo from '@/public/img/Otniel.jpg'
 import gladice_photo from '@/public/img/Gladice.png';
 import invite_photo from '@/public/img/Invite.png';
+import Link from "next/link";
+
 /**
  * 
  * @returns Section des intervenants
@@ -24,9 +25,9 @@ export default function Intervenants() {
                 </div>
                 <h2>Collège la Cité</h2>
                 <div className={styles.Intervenant_social_media}>
-                    <a href="#"><FaTwitter className={styles.icon}   /></a>
-                    <a href="#"><FaFacebookF className={styles.icon} /></a>
-                    <a href="#"><FaInstagram className={styles.icon} /></a>
+                    <Link href="#" target="_blank"><FaTwitter className={styles.icon}   /></Link>
+                    <Link href="#" target="_blank"><FaFacebookF className={styles.icon} /></Link>
+                    <Link href="#" target="_blank"><FaInstagram className={styles.icon} /></Link>
                 </div>
             </div>
 
@@ -39,9 +40,9 @@ export default function Intervenants() {
                 </div>
                 <h2>Collège la Cité</h2>
                 <div className={styles.Intervenant_social_media}>
-                    <a href="#"><FaTwitter className={styles.icon}   /></a>
-                    <a href="#"><FaFacebookF className={styles.icon} /> </a>
-                    <a href="#"><FaInstagram className={styles.icon} /> </a>
+                    <Link href="#" target="_blank"><FaTwitter className={styles.icon}   /></Link>
+                    <Link href="#" target="_blank"><FaFacebookF className={styles.icon} /> </Link>
+                    <Link href="#" target="_blank"><FaInstagram className={styles.icon} /> </Link>
                 </div>
             </div>
 
@@ -54,9 +55,9 @@ export default function Intervenants() {
                 </div>
                 <h2>Collège la Cité</h2>
                 <div className={styles.Intervenant_social_media}>
-                    <a href="#"><FaTwitter className={styles.icon}   /></a>
-                    <a href="#"><FaFacebookF className={styles.icon} /></a>
-                    <a href="#"><FaInstagram className={styles.icon} /></a>
+                    <Link href="#" target="_blank"><FaTwitter className={styles.icon}   /></Link>
+                    <Link href="#" target="_blank"><FaFacebookF className={styles.icon} /></Link>
+                    <Link href="#" target="_blank"><FaInstagram className={styles.icon} /></Link>
                 </div>
             </div>
 
@@ -69,9 +70,9 @@ export default function Intervenants() {
                 </div>
                 <h2>Collège la Cité</h2>
                 <div className={styles.Intervenant_social_media}>
-                    <a href="#"><FaTwitter className={styles.icon}   /></a>
-                    <a href="#"><FaFacebookF className={styles.icon} /> </a>
-                    <a href="#"><FaInstagram className={styles.icon} /></a>
+                    <Link href="#" target="_blank"><FaTwitter className={styles.icon}   /></Link>
+                    <Link href="#" target="_blank"><FaFacebookF className={styles.icon} /> </Link>
+                    <Link href="#" target="_blank"><FaInstagram className={styles.icon} /></Link>
                 </div>
             </div>
 
@@ -84,9 +85,9 @@ export default function Intervenants() {
                 </div>
                 <h2>Collège la Cité</h2>
                 <div className={styles.Intervenant_social_media}>
-                    <a href="#"><FaTwitter className={styles.icon}   /> </a>
-                    <a href="#"><FaFacebookF className={styles.icon} /> </a>
-                    <a href="#"><FaInstagram className={styles.icon} /> </a>
+                    <Link href="#" target="_blank"><FaTwitter className={styles.icon}   /> </Link>
+                    <Link href="#" target="_blank"><FaFacebookF className={styles.icon} /> </Link>
+                    <Link href="#" target="_blank"><FaInstagram className={styles.icon} /> </Link>
                 </div>
             </div>
 
@@ -99,9 +100,9 @@ export default function Intervenants() {
                 </div>
                 <h2>Collège la Cité</h2>
                 <div className={styles.Intervenant_social_media}>
-                    <a href="#"><FaTwitter className={styles.icon}   /> </a>
-                    <a href="#"><FaFacebookF className={styles.icon} /> </a>
-                    <a href="#"><FaInstagram className={styles.icon} /> </a>
+                    <Link href="#" target="_blank"><FaTwitter className={styles.icon}   /> </Link>
+                    <Link href="#" target="_blank"><FaFacebookF className={styles.icon} /> </Link>
+                    <Link href="#" target="_blank"><FaInstagram className={styles.icon} /> </Link>
                 </div>
             </div>
         </div>
