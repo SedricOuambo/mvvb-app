@@ -9,32 +9,32 @@ export default function Contact() {
         <div className={styles.grid + ' ' + styles.contact__container + ' ' + 'container'}>
             <div className={styles.contact__information_content}>
                 <div className={styles.contact__information}>
-                    <a href="tel:+18999999999" target="_blank" className={styles.contact__information}>
+                    <Link href="tel:+18999999999" target="_blank" className={styles.contact__information}>
                         <i className={styles.contact__icon + ' ' + 'uil uil-phone'}></i>
                         <div>
                             <h3 className={styles.contact__title + ' ' + styles.call__me}>Appel</h3>
                             <span className={styles.contact__subtitle}>+1 899-99-9999</span>
                         </div>
-                    </a>
+                    </Link>
                 </div>
 
                 <div className={styles.contact__information}>
-                    <a href="mailto:mvvb-app@gmail.com" target="_blank" className={styles.contact__information}>
+                    <Link href="mailto:mvvb-app@gmail.com" target="_blank" className={styles.contact__information}>
                         <i className={styles.contact__icon + ' ' + 'uil uil-envelope'}></i>
                         <div>
                             <h3 className={styles.contact__title + ' ' + styles.email}>Courriel</h3>
                             <span className={styles.contact__subtitle}>mvvb-app@gmail.com</span>
                         </div>
-                    </a>
+                    </Link>
                 </div>
 
                 <div className={styles.contact__information}>
-                    <a href="https://wa.me/+1 899-99-9999" target="_blank" className={styles.contact__information}>
+                    <Link href="https://wa.me/+1 899-99-9999" target="_blank" className={styles.contact__information}>
                         <i className={styles.contact__icon + ' ' + 'uil uil-whatsapp'}></i>
                         <div>
                             <h3 className={styles.contact__title}>Whatsapp</h3>
                         </div>
-                    </a>
+                    </Link>
                 </div>
 
                 <div className={styles.contact__information}>
