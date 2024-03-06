@@ -3,9 +3,20 @@ import Horaire from '@/components/Horaire';
 import Programme from '@/components/Programme';
 import Intervenants from '@/components/Intervenants';
 import Sponsors from '@/components/Sponsors';
-import Inscription from '@/components/Inscription';
-import Contact from '@/components/Contact';
 import Notifications from '@/components/Notifications';
+
+/**
+ * @type {import('next').Metadata}
+ */
+export const metadata = {
+  title: 'Accueil MVVB',
+  description: 'Bienvenue sur notre page d&apos; accueil MVVB',
+  openGraph: {
+    title: 'Accueil MVVB',
+    description: 'Bienvenue sur notre page d&apos; accueil MVVB',
+    images: ['/logo mvvb.jpg']
+  }
+}
 
 /**
  * Page d'accueil qui regroupe tous les components

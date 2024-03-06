@@ -5,6 +5,19 @@ import { FaInstagram, FaFacebookF, FaBlenderPhone, FaWhatsapp, FaTwitter } from 
 import emailjs from "@emailjs/browser";
 
 /**
+ * @type {import('next').Metadata}
+ */
+export const metadata ={
+    title:' Contact',
+    description:'Contactez nous pour reserver votre place ou pour avoir plus d\'informafion',
+    openGraph: {
+        title: 'Contact',
+        description: 'Contactez nous pour reserver votre place ou pour avoir plus d\'informafion',
+        images: ['/logo mvvb.jpg']
+      }
+  }
+
+/**
  * Fonction permettant d'envoyer un mail via EmailJS
  * @param {formData contenant les valeurs de tous les champs} formData 
  */

@@ -18,6 +18,19 @@ import img2Sujet5 from '@/public/img/physique5.jpeg';
 import img3Sujet5 from '@/public/img/physique6.jpeg';
 
 /**
+ * @type {import('next').Metadata}
+ */
+export const metadata ={
+    title:'Jour1 Conference',
+    description:'Presentation des evennement de notre premier jour de conference',
+    openGraph: {
+        title: 'Jour1 Conference',
+        description: 'Presentation des evennement de notre premier jour de conference',
+        images: ['/logo mvvb.jpg']
+      }
+  }
+
+/**
  * Page du contenu de la premiere journee de l'evenement
  * @returns Jour1
  */
