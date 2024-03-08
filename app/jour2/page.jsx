@@ -13,6 +13,20 @@ import stress1 from '@/public/img/jour2img/sujet3img/stress1.jpg';
 import repos1 from '@/public/img/jour2img/sujet4img/repos1.jpeg';
 import repos2 from '@/public/img/jour2img/sujet4img/repos2.jpeg';
 import repos3 from '@/public/img/jour2img/sujet4img/repos3.jpeg';
+
+/**
+ * @type {import('next').Metadata}
+ */
+export const metadata ={
+    title:'Comprendre la Psychologie humaine',
+    description:'Presentation des evennement de notre deuxieme jour de conference',
+    openGraph: {
+        title: 'Jour2 Conference',
+        description: 'Presentation des evennement de notre deuxieme jour de conference',
+        images: ['/logo mvvb.jpg']
+      }
+  }
+
 /**
  * Page du contenu de la deuxieme journee de l'evenement
  * @returns jour2

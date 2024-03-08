@@ -5,11 +5,11 @@ import styles from './Presentation.module.css';
  */
 export default function Presentation() {
     return <section className={styles.section}>
-        <h1 className='title'> C'est quoi MVVB?</h1>
+        <h1 className='title'> C&apos;est quoi MVVB?</h1>
         <div className='container'>
             <p>
-                Le plus grand événement de l'année est presque arrivé. Comme le veut la tradition, nous organisons de
-                nouveau mvvb pour rassembler et sensibiliser nos invites sur comment Mieux Vivre․ c’est un lieu idéal
+                Le plus grand événement de l&apos;année est presque arrivé. Comme le veut la tradition, nous organisons de
+                nouveau mvvb pour rassembler et sensibiliser nos invites sur comment Mieux Vivre․ c&apos;est un lieu idéal
                 pour des personnes soucieuses de leur bien être.
             </p>
             <p>

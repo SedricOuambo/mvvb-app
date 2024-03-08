@@ -1,11 +1,17 @@
-'use client'
-import { useState } from 'react';
-import styles from '@/components/Contact.module.css';
-import { FaInstagram, FaFacebookF, FaBlenderPhone, FaWhatsapp, FaTwitter } from "react-icons/fa";
-import emailjs from "@emailjs/browser";
-import Link from 'next/link';
-
+import Contact from '@/components/Contact.jsx';
 /**
+ * @type {import('next').Metadata}
+ */
+export const metadata ={
+    title:' Contact',
+    description:'Contactez nous pour reserver votre place ou pour avoir plus d\'informafion',
+    openGraph: {
+        title: 'Contact',
+        description: 'Contactez nous pour reserver votre place ou pour avoir plus d\'informafion',
+        images: ['/logo mvvb.jpg']
+      }
+  }
+export default function Pcontact() {
  * Fonction permettant d'envoyer un mail via EmailJS
  * @param {formData contenant les valeurs de tous les champs} formData 
  */
@@ -118,6 +124,7 @@ export default function Contact() {
     }
 
     return <>
+        <Contact />
         <div className={styles.container__contact}>
             <div className={styles.form__info}>
                 <div className={styles.contact_info_contact}>
