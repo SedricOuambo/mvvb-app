@@ -6,45 +6,6 @@ import { FaInstagram, FaFacebookF, FaBlenderPhone, FaWhatsapp, FaTwitter } from 
 import emailjs from "@emailjs/browser";
 import Link from 'next/link';
 
-
-
-/**
- * Fonction permettant d'envoyer un mail via EmailJS
- * @param {formData contenant les valeurs de tous les champs} formData 
- */
-const sendEmail = (formData) => {
-    const infos_results = document.getElementById('infos_results');
-    const subject = document.getElementById('subject');
-    const message = document.getElementById('message')
-
-    const templateParams = {
-        name: formData.get('name'),
-        subject: formData.get('object'),
-        email: formData.get('email'),
-        message: formData.get('message'),
-    }
-
-    emailjs.send(
-        'service_e8l5qhh',      //SERVICE ID
-        'template_2gzcyss',     //TEMPLATE ID
-        templateParams,
-        'XI68Lm3ggbss3OTpx'     //USER PUBLIC KEY
-    ).then(
-        (response) => {
-            infos_results.style.color = 'green';
-            infos_results.textContent = 'Votre message a été envoyé avec succès. Nous vous reviendrons très bientôt.'
-            //Linkpres l'envoi du mail, on efface les champs objets et message
-            //Pour empecher les envois repetitifs par simple clic
-            subject.value = "";
-            message.value = "";
-        },
-        (error) => {
-            infos_results.style.color = 'red';
-            infos_results.textContent = 'Message non envoyé.'
-        }
-    );
-}
-
 /**
  * Page du contenu de la page de contact
  * @returns Contact
@@ -55,6 +16,7 @@ export default function Contact() {
     const [erreurphone, setErreurPhone] = useState('');
     const [erreurmessage, setErreurMessage] = useState('');
     const [erreurobject, setErreurObject] = useState('');
+    const [infosresults, setInfosResults] = useState('');
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const phoneRegex = /^\d{10}$/;
 
@@ -95,7 +57,28 @@ export default function Contact() {
         else { setErreurMessage(''); }
 
         //S'il n'y a pas d'erreur, on envoie le mail
-        if (!erreur) { sendEmail(formData); }
+        if (!erreur) {
+            const templateParams = {
+                name: formData.get('name'),
+                subject: formData.get('object'),
+                email: formData.get('email'),
+                message: formData.get('message'),
+            }
+            emailjs.send(
+                'service_7xr0l1o',      //SERVICE ID
+                'template_qxyqu87',     //TEMPLATE ID
+                templateParams,
+                'EafQMSog5KfEZpIoZ'     //USER PUBLIC KEY
+            ).then(
+                (response) => {
+                    setInfosResults('Votre message a été envoyé avec succès. Nous vous reviendrons très bientôt.')
+                    form.reset();
+                },
+                (error) => {
+                    setInfosResults('Message non envoyé.')
+                }
+            );
+        }
     }
 
     return <>
@@ -165,7 +148,9 @@ export default function Contact() {
                             <input type="reset" value="Effacer" className={styles.button + ' ' + styles.btn} />
                             <input type="submit" value="Envoyer" className={styles.button + ' ' + styles.btn} />
                         </div>
-                        <div id='infos_results' className={styles.infos_results}></div>
+                        <div className={styles.infos_results}>
+                            {infosresults && <div>{infosresults}</div>}
+                        </div>
                     </form>
                 </div>
             </div>
