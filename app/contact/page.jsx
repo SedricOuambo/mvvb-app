@@ -9,38 +9,38 @@ import Link from 'next/link';
  * Fonction permettant d'envoyer un mail via EmailJS
  * @param {formData contenant les valeurs de tous les champs} formData 
  */
-const sendEmail = (formData) => {
-    const infos_results = document.getElementById('infos_results');
-    const subject = document.getElementById('subject');
-    const message = document.getElementById('message')
+// const sendEmail = (formData) => {
+//     const infos_results = document.getElementById('infos_results');
+//     const subject = document.getElementById('subject');
+//     const message = document.getElementById('message');
 
-    const templateParams = {
-        name: formData.get('name'),
-        subject: formData.get('object'),
-        email: formData.get('email'),
-        message: formData.get('message'),
-    }
+//     const templateParams = {
+//         name: formData.get('name'),
+//         subject: formData.get('object'),
+//         email: formData.get('email'),
+//         message: formData.get('message'),
+//     }
 
-    emailjs.send(
-        'service_e8l5qhh',      //SERVICE ID
-        'template_2gzcyss',     //TEMPLATE ID
-        templateParams,
-        'XI68Lm3ggbss3OTpx'     //USER PUBLIC KEY
-    ).then(
-        (response) => {
-            infos_results.style.color = 'green';
-            infos_results.textContent = 'Votre message a été envoyé avec succès. Nous vous reviendrons très bientôt.'
-            //Linkpres l'envoi du mail, on efface les champs objets et message
-            //Pour empecher les envois repetitifs par simple clic
-            subject.value = "";
-            message.value = "";
-        },
-        (error) => {
-            infos_results.style.color = 'red';
-            infos_results.textContent = 'Message non envoyé.'
-        }
-    );
-}
+//     emailjs.send(
+//         'service_e8l5qhh',      //SERVICE ID
+//         'template_2gzcyss',     //TEMPLATE ID
+//         templateParams,
+//         'XI68Lm3ggbss3OTpx'     //USER PUBLIC KEY
+//     ).then(
+//         (response) => {
+//             infos_results.style.color = 'green';
+//             infos_results.textContent = 'Votre message a été envoyé avec succès. Nous vous reviendrons très bientôt.'
+//             //Linkpres l'envoi du mail, on efface les champs objets et message
+//             //Pour empecher les envois repetitifs par simple clic
+//             subject.value = "";
+//             message.value = "";
+//         },
+//         (error) => {
+//             infos_results.style.color = 'red';
+//             infos_results.textContent = 'Message non envoyé.';
+//         }
+//     );
+// }
 
 /**
  * Page du contenu de la page de contact
@@ -52,6 +52,7 @@ export default function Contact() {
     const [erreurphone, setErreurPhone] = useState('');
     const [erreurmessage, setErreurMessage] = useState('');
     const [erreurobject, setErreurObject] = useState('');
+    const [infosmessage, setInfosMessage] = useState('');
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const phoneRegex = /^\d{10}$/;
 
@@ -92,7 +93,28 @@ export default function Contact() {
         else { setErreurMessage(''); }
 
         //S'il n'y a pas d'erreur, on envoie le mail
-        if (!erreur) { sendEmail(formData); }
+        if (!erreur) {
+            // sendEmail(formData);
+            const templateParams = {
+                name: formData.get('name'),
+                subject: formData.get('object'),
+                email: formData.get('email'),
+                message: formData.get('message'),
+            }
+            emailjs.send(
+                'service_7xr0l1o',      //SERVICE ID
+                'template_qxyqu87',     //TEMPLATE ID
+                templateParams,
+                'EafQMSog5KfEZpIoZ'     //USER PUBLIC KEY
+            ).then(
+                (response) => {
+                    setInfosMessage('Votre message a été envoyé avec succès. Nous vous reviendrons très bientôt.');
+                },
+                (error) => {
+                    setInfosMessage('Message non envoyé.');
+                }
+            );
+        }
     }
 
     return <>
@@ -144,14 +166,14 @@ export default function Contact() {
                             {erreurname && <span>{erreurname}</span>}
                         </div>
                         <div>
-                            <input type="text" name="email" placeholder='Votre email' />
+                            <input type="text" name="email" placeholder='Votre email'/>
                             {erreuremail && <span>{erreuremail}</span>}
                         </div>
                         <div>
                             <input type="tel" name="phone" placeholder='Votre N° de téléphone' />
                             {erreurphone && <span>{erreurphone}</span>}</div>
                         <div>
-                            <input type="text" name="object" placeholder='Objet de votre message' id='subject' />
+                            <input type="text" name="object" placeholder='Objet de votre message' id='subject'/>
                             {erreurobject && <span>{erreurobject}</span>}
                         </div>
                         <div>
@@ -162,7 +184,9 @@ export default function Contact() {
                             <input type="reset" value="Effacer" className={styles.button + ' ' + styles.btn} />
                             <input type="submit" value="Envoyer" className={styles.button + ' ' + styles.btn} />
                         </div>
-                        <div id='infos_results' className={styles.infos_results}></div>
+                        <div id='infos_results' className={styles.infos_results}>
+                            {infosmessage && <div>{infosmessage}</div>}
+                        </div>
                     </form>
                 </div>
             </div>
