@@ -21,12 +21,12 @@ import img3Sujet5 from '@/public/img/physique6.jpeg';
  * @type {import('next').Metadata}
  */
 export const metadata ={
-    title:'L\'alimentation',
-    description:'Presentation des evennement de notre premier jour de conference',
+    title:'Mvvb-app | Jour1 : Alimentation',
+    description:'Presentation des activités du premier jour de notre conférence',
     openGraph: {
-        title: 'Jour1 Conference',
-        description: 'Presentation des evennement de notre premier jour de conference',
-        images: ['/logo mvvb.jpg']
+        title: 'Mvvb-app | Jour1 : Alimentation',
+        description: 'Presentation des activités du premier jour de notre conférence',
+        images: ['/logo_mvvb.png']
       }
   }
 

@@ -1,5 +1,4 @@
 'use client'
-//import styles from './Contact2.module.css';
 import { useState } from 'react';
 import styles from '@/components/Contact.module.css';
 import { FaInstagram, FaFacebookF, FaBlenderPhone, FaWhatsapp, FaTwitter } from "react-icons/fa";

@@ -17,15 +17,15 @@ import repos3 from '@/public/img/jour2img/sujet4img/repos3.jpeg';
 /**
  * @type {import('next').Metadata}
  */
-export const metadata ={
-    title:'Comprendre la Psychologie humaine',
-    description:'Presentation des evennement de notre deuxieme jour de conference',
+export const metadata = {
+    title: 'Mvvb-app | Jour2 : Psychologie humaine',
+    description: 'Presentation des activités du deuxième jour de notre conférence',
     openGraph: {
-        title: 'Jour2 Conference',
-        description: 'Presentation des evennement de notre deuxieme jour de conference',
-        images: ['/logo mvvb.jpg']
-      }
-  }
+        title: 'Mvvb-app | Jour2 : Psychologie humaine',
+        description: 'Presentation des activités du deuxième jour de notre conférence',
+        images: ['/logo_mvvb.png']
+    }
+}
 
 /**
  * Page du contenu de la deuxieme journee de l'evenement

@@ -11,20 +11,25 @@ const inter = Inter({ subsets: ['latin'] });
 /**
  * @type {import('next').Metadata}
  */
-export const metadata ={
-  title:'Bienvenue sur MVVB',
-  description:'Mieux Vivre Et Vivre Bien',
+export const metadata = {
+  title: 'Mvvb-app | Présentation',
+  description: 'Site web annonçant une conférence sur le mieux vivre.',
+  openGraph: {
+    title: 'Mvvb-app | Présentation',
+    description: 'Site web annonçant une conférence sur le mieux vivre.',
+    images: ['/logo_mvvb.png']
+  }
 }
 
 export default function RootLayout({ children }) {
-  return  <html lang="fr">
+  return <html lang="fr">
     <body className={inter.className + ' ' + styles.body}>
-      <Header/>
-      <Bannierre/>
+      <Header />
+      <Bannierre />
       <main className={styles.main}>
         {children}
       </main>
-      <Footer/>
+      <Footer />
     </body>
   </html>
 }

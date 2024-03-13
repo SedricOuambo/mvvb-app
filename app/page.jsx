@@ -10,12 +10,12 @@ import Notifications from '@/components/Notifications';
  * @type {import('next').Metadata}
  */
 export const metadata = {
-  title: 'Mieux Vivre Et Vivre Bien Conference',
-  description: 'Bienvenue sur notre page d\' accueil MVVB',
+  title: 'Mvvb-app | Accueil',
+  description: 'Page d\' accueil de notre application',
   openGraph: {
-    title: 'Accueil MVVB',
-    description: 'Bienvenue sur notre page d\' accueil MVVB',
-    images: ['/logo mvvb.jpg']
+    title: 'Mvvb-app | Accueil',
+    description: 'Page d\' accueil de notre application',
+    images: ['/logo_mvvb.png']
   }
 }
 

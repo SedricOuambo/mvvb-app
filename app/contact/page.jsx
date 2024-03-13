@@ -3,12 +3,12 @@ import Contact from '@/components/Contact.jsx';
  * @type {import('next').Metadata}
  */
 export const metadata = {
-    title: ' Contact',
-    description: 'Contactez nous pour reserver votre place ou pour avoir plus d\'informafion',
+    title: ' Mvvb-app | Contact',
+    description: 'Page pour nous contacter et avoir plus d\'informations',
     openGraph: {
-        title: 'Contact',
-        description: 'Contactez nous pour reserver votre place ou pour avoir plus d\'informafion',
-        images: ['/logo mvvb.jpg']
+        title: 'Mvvb-app | Contact',
+        description: 'Page pour nous contacter et avoir plus d\'informations',
+        images: ['/logo_mvvb.png']
     }
 }
 
