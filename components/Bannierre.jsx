@@ -1,6 +1,8 @@
 'use client';
 import { useState, useEffect } from 'react';
 import styles from './Bannierre.module.css';
+//Importation de la fonction Head depuis next/head
+import Head from 'next/head';
 
 /**
  * Elle contient l'image baniere et le compte a rebours
@@ -42,30 +44,41 @@ export default function Bannierre() {
 
 
   return (
-    <section className={styles.banner}>
-      <span>Prochaine Conférence dans :</span>
-      <div className={styles.Chronometre}>
-        <div className={styles.sous__chrono}>
-          <div className={styles.decopmte}>
-            <div className={styles.time}>{time.days}:</div>
-            <div className={styles.label}>JOURS</div>
+    <>
+      {/* Utilisation de la balise Head pour ajouter le préchargement de l'image */}
+      <Head>
+        {/* Balise link pour le préchargement de l'image */}
+        {/* <link rel="preload" href="../public/img/bannierre.webp" as="image" type="image/webp" /> */}
+        {/* Balise meta pour la priorité de récupération */}
+        {/* <meta name="fetchpriority" content="high" /> */}
+        {/* <img rel="preload" src="../public/img/bannierre.webp" as="image"/> */}
+      </Head>
+
+      <section className={styles.banner}>
+        <span>Prochaine Conférence dans :</span>
+        <div className={styles.Chronometre}>
+          <div className={styles.sous__chrono}>
+            <div className={styles.decopmte}>
+              <div className={styles.time}>{time.days}:</div>
+              <div className={styles.label}>JOURS</div>
+            </div>
+            <div className={styles.decopmte}>
+              <div className={styles.time}>{time.hours}:</div>
+              <div className={styles.label}>HEURES</div>
+            </div>
           </div>
-          <div className={styles.decopmte}>
-            <div className={styles.time}>{time.hours}:</div>
-            <div className={styles.label}>HEURES</div>
+          <div className={styles.sous__chrono}>
+            <div className={styles.decopmte}>
+              <div className={styles.time}>{time.minutes}:</div>
+              <div className={styles.label}>MINUTES</div>
+            </div>
+            <div className={styles.decopmte}>
+              <div className={styles.time}>{time.seconds}</div>
+              <div className={styles.label}>SECONDES</div>
+            </div>
           </div>
         </div>
-        <div className={styles.sous__chrono}>
-          <div className={styles.decopmte}>
-            <div className={styles.time}>{time.minutes}:</div>
-            <div className={styles.label}>MINUTES</div>
-          </div>
-          <div className={styles.decopmte}>
-            <div className={styles.time}>{time.seconds}</div>
-            <div className={styles.label}>SECONDES</div>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

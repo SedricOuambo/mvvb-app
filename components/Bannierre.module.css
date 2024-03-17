@@ -1,5 +1,5 @@
 .banner {
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url('../public/img/bannierre.jpg') center center fixed no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url('../public/img/bannierre.webp') center center fixed no-repeat;
     background-size: cover;
     height: 40vh;
 }

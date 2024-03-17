@@ -1,6 +1,5 @@
 import styles from '@/components/Jour1.module.css';
 import Sujet from '../../components/Sujet';
-
 import img1Sujet1 from '@/public/img/sujet1_1.jpg';
 import img2Sujet1 from '@/public/img/sujet1_2.jpg';
 import img3Sujet1 from '@/public/img/sujet1_3.jpg';
@@ -20,15 +19,15 @@ import img3Sujet5 from '@/public/img/physique6.jpeg';
 /**
  * @type {import('next').Metadata}
  */
-export const metadata ={
-    title:'Mvvb-app | Jour1 : Alimentation',
-    description:'Presentation des activités du premier jour de notre conférence',
+export const metadata = {
+    title: 'Mvvb-app | Jour1 : Alimentation',
+    description: 'Presentation des activités du premier jour de notre conférence',
     openGraph: {
         title: 'Mvvb-app | Jour1 : Alimentation',
         description: 'Presentation des activités du premier jour de notre conférence',
         images: ['/logo_mvvb.png']
-      }
-  }
+    }
+}
 
 /**
  * Page du contenu de la premiere journee de l'evenement

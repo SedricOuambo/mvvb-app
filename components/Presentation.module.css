@@ -5,7 +5,7 @@
 }
 
 .section p {
-    color: var(--text-color-light);
+    color: #000;
     font-size: 1rem;
 }
 

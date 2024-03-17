@@ -1,12 +1,11 @@
 import styles from '@/components/Jour2.module.css';
 import Sujet from '../../components/Sujet';
-
 import robu1 from '@/public/img/jour2img/sujet1img/robu1.jpg';
 import robu2 from '@/public/img/jour2img/sujet1img/robu2.jpg';
 import cons1 from '@/public/img/jour2img/sujet2img/cons1.png';
 import cons2 from '@/public/img/jour2img/sujet2img/cons2.jpg';
 import cons3 from '@/public/img/jour2img/sujet2img/cons3.jpeg';
-import pause1 from '@/public/img/jour2img/pause/pause1.jpeg';
+import pause1 from '@/public/img/jour2img/pause/pause1.jpg';
 import pause2 from '@/public/img/jour2img/pause/pause2.jpg';
 import pause3 from '@/public/img/jour2img/pause/pause3.jpeg';
 import stress1 from '@/public/img/jour2img/sujet3img/stress1.jpg';

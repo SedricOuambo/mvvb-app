@@ -6,7 +6,6 @@ import sedric_photo from '@/public/img/Sedric.png'
 import otniel_photo from '@/public/img/Otniel.jpg'
 import gladice_photo from '@/public/img/Gladice.png';
 import invite_photo from '@/public/img/Invite.png';
-import Link from "next/link";
 
 /**
  * 
@@ -25,9 +24,9 @@ export default function Intervenants() {
                 </div>
                 <h2>Collège la Cité</h2>
                 <div className={styles.Intervenant_social_media}>
-                    <Link href="#" target="_blank"><FaTwitter className={styles.icon}   /></Link>
-                    <Link href="#" target="_blank"><FaFacebookF className={styles.icon} /></Link>
-                    <Link href="#" target="_blank"><FaInstagram className={styles.icon} /></Link>
+                    <a href="#" target="_blank" aria-label="Twitter"  ><FaTwitter className={styles.icon} /></a>
+                    <a href="#" target="_blank" aria-label="Facebook" ><FaFacebookF className={styles.icon} /></a>
+                    <a href="#" target="_blank" aria-label="Instagram"><FaInstagram className={styles.icon} /></a>
                 </div>
             </div>
 
@@ -40,9 +39,9 @@ export default function Intervenants() {
                 </div>
                 <h2>Collège la Cité</h2>
                 <div className={styles.Intervenant_social_media}>
-                    <Link href="#" target="_blank"><FaTwitter className={styles.icon}   /></Link>
-                    <Link href="#" target="_blank"><FaFacebookF className={styles.icon} /> </Link>
-                    <Link href="#" target="_blank"><FaInstagram className={styles.icon} /> </Link>
+                    <a href="#" target="_blank" aria-label="Twitter"  ><FaTwitter className={styles.icon} /></a>
+                    <a href="#" target="_blank" aria-label="Facebook" ><FaFacebookF className={styles.icon} /> </a>
+                    <a href="#" target="_blank" aria-label="Instagram"><FaInstagram className={styles.icon} /> </a>
                 </div>
             </div>
 
@@ -55,9 +54,9 @@ export default function Intervenants() {
                 </div>
                 <h2>Collège la Cité</h2>
                 <div className={styles.Intervenant_social_media}>
-                    <Link href="#" target="_blank"><FaTwitter className={styles.icon}   /></Link>
-                    <Link href="#" target="_blank"><FaFacebookF className={styles.icon} /></Link>
-                    <Link href="#" target="_blank"><FaInstagram className={styles.icon} /></Link>
+                    <a href="#" target="_blank" aria-label="Twitter"  ><FaTwitter className={styles.icon} /></a>
+                    <a href="#" target="_blank" aria-label="Facebook" ><FaFacebookF className={styles.icon} /></a>
+                    <a href="#" target="_blank" aria-label="Instagram"><FaInstagram className={styles.icon} /></a>
                 </div>
             </div>
 
@@ -70,9 +69,9 @@ export default function Intervenants() {
                 </div>
                 <h2>Collège la Cité</h2>
                 <div className={styles.Intervenant_social_media}>
-                    <Link href="#" target="_blank"><FaTwitter className={styles.icon}   /></Link>
-                    <Link href="#" target="_blank"><FaFacebookF className={styles.icon} /> </Link>
-                    <Link href="#" target="_blank"><FaInstagram className={styles.icon} /></Link>
+                    <a href="#" target="_blank" aria-label="Twitter"  ><FaTwitter className={styles.icon} /></a>
+                    <a href="#" target="_blank" aria-label="Facebook" ><FaFacebookF className={styles.icon} /> </a>
+                    <a href="#" target="_blank" aria-label="Instagram"><FaInstagram className={styles.icon} /></a>
                 </div>
             </div>
 
@@ -85,9 +84,9 @@ export default function Intervenants() {
                 </div>
                 <h2>Collège la Cité</h2>
                 <div className={styles.Intervenant_social_media}>
-                    <Link href="#" target="_blank"><FaTwitter className={styles.icon}   /> </Link>
-                    <Link href="#" target="_blank"><FaFacebookF className={styles.icon} /> </Link>
-                    <Link href="#" target="_blank"><FaInstagram className={styles.icon} /> </Link>
+                    <a href="#" target="_blank" aria-label="Twitter"  ><FaTwitter className={styles.icon} /> </a>
+                    <a href="#" target="_blank" aria-label="Facebook" ><FaFacebookF className={styles.icon} /> </a>
+                    <a href="#" target="_blank" aria-label="Instagram"><FaInstagram className={styles.icon} /> </a>
                 </div>
             </div>
 
@@ -100,9 +99,9 @@ export default function Intervenants() {
                 </div>
                 <h2>Collège la Cité</h2>
                 <div className={styles.Intervenant_social_media}>
-                    <Link href="#" target="_blank"><FaTwitter className={styles.icon}   /> </Link>
-                    <Link href="#" target="_blank"><FaFacebookF className={styles.icon} /> </Link>
-                    <Link href="#" target="_blank"><FaInstagram className={styles.icon} /> </Link>
+                    <a href="#" target="_blank" aria-label="Twitter"  ><FaTwitter className={styles.icon} /> </a>
+                    <a href="#" target="_blank" aria-label="Facebook" ><FaFacebookF className={styles.icon} /> </a>
+                    <a href="#" target="_blank" aria-label="Instagram"><FaInstagram className={styles.icon} /> </a>
                 </div>
             </div>
         </div>

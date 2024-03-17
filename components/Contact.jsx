@@ -84,7 +84,7 @@ export default function Contact() {
         <div className={styles.container__contact}>
             <div className={styles.form__info}>
                 <div className={styles.contact_info_contact}>
-                    <h3 className={styles.title}>On reste en contact?</h3>
+                    <p className={styles.title}>On reste en contact?</p>
                     <p className={styles.text}>
                         Vous souhaitez nous contactez, avoir davantages d&apos;informations
                         sur Entraide App ou tout simplement papoter, Nous sommes joignables
@@ -95,13 +95,13 @@ export default function Contact() {
                         <div className={styles.information}>
                             <Link href="tel:+18193199747" target="_blank" className={styles.contact__information}>
                                 <FaBlenderPhone className={styles.icon} />
-                                <h3>+18999999999</h3>
+                                <p>+18999999999</p>
                             </Link>
                         </div>
                         <div className={styles.information}>
                             <Link href="https://wa.me/+18999999999" target="_blank" className={styles.contact__information}>
                                 <FaWhatsapp className={styles.icon} />
-                                <h3>Whatsapp</h3>
+                                <p>Whatsapp</p>
                             </Link>
                         </div>
                     </div>
@@ -109,9 +109,9 @@ export default function Contact() {
                     <div className={styles.social__media}>
                         <p>Nous sommes aussi ici:</p>
                         <div className={styles.social_icons_container}>
-                            <Link href="#" target="_blank"> <FaFacebookF className={styles.icon} /> </Link>
-                            <Link href="#" target="_blank"> <FaTwitter className={styles.icon} /></Link>
-                            <Link href="#" target="_blank"><FaInstagram className={styles.icon} /></Link>
+                            <a href="#" target="_blank" aria-label="Facebook"> <FaFacebookF className={styles.icon} /> </a>
+                            <a href="#" target="_blank" aria-label="Twitter"> <FaTwitter className={styles.icon} /></a>
+                            <a href="#" target="_blank" aria-label="Instagram"><FaInstagram className={styles.icon} /></a>
                         </div>
                     </div>
                 </div>

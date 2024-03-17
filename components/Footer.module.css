@@ -27,7 +27,6 @@
 }
 
 .footer__mvvb div {
-    color: var(--first-color-second);
     font-size: var(--big-font-size);
 }
 
@@ -57,7 +56,6 @@
 
 .footer__horaire p {
     font-size: var(--h2-font-size);
-    color: var(--first-color-second);
 }
 
 .col {

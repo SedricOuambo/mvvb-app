@@ -1,6 +1,5 @@
 import { FaInstagram, FaFacebookF, FaTwitter } from "react-icons/fa";
 import styles from './Footer.module.css';
-import Link from "next/link";
 
 /**
  * Pied de page
@@ -16,9 +15,9 @@ export default function Footer() {
                     <p>Prenez soin de votre santé physique et mental grâce à notre conférence internationale.</p>
                 </div>
                 <div className={styles.footer_social}>
-                    <Link href="#" target="_blank"><FaFacebookF className={styles.icon} /></Link>
-                    <Link href="#" target="_blank"><FaTwitter className={styles.icon} /></Link>
-                    <Link href="#" target="_blank"><FaInstagram className={styles.icon} /></Link>
+                    <a href="#" target="_blank" aria-label="Facebook"><FaFacebookF className={styles.icon} /></a>
+                    <a href="#" target="_blank" aria-label="Twitter"><FaTwitter className={styles.icon} /></a>
+                    <a href="#" target="_blank" aria-label="Instagram"><FaInstagram className={styles.icon} /></a>
                 </div>
             </div>
 
