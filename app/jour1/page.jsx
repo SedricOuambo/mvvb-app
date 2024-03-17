@@ -10,10 +10,10 @@ import img1Sujet3 from '@/public/img/pause.jpeg';
 import img2Sujet3 from '@/public/img/pause2.jpeg';
 import img3Sujet3 from '@/public/img/pause3.jpeg';
 import img1Sujet4 from '@/public/img/physique1.jpeg';
-import img2Sujet4 from '@/public/img/physique2.jpeg';
+import img2Sujet4 from '@/public/img/physique2.jpg';
 import img3Sujet4 from '@/public/img/physique3.png';
 import img1Sujet5 from '@/public/img/physique4.jpeg';
-import img2Sujet5 from '@/public/img/physique5.jpeg';
+import img2Sujet5 from '@/public/img/physique5.jpg';
 import img3Sujet5 from '@/public/img/physique6.jpeg';
 
 /**
