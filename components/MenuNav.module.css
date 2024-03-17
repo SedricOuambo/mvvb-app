@@ -38,6 +38,7 @@
 .nav__brand {
   display: flex;
   align-items: center;
+  height: 100%;
 }
 
 .nav__menu {
