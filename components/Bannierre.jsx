@@ -1,8 +1,8 @@
 'use client';
 import { useState, useEffect } from 'react';
 import styles from './Bannierre.module.css';
-//Importation de la fonction Head depuis next/head
-import Head from 'next/head';
+import Image from 'next/image';
+import bannerImg from '@/public/img/bannierre.webp'
 
 /**
  * Elle contient l'image baniere et le compte a rebours
@@ -42,19 +42,11 @@ export default function Bannierre() {
     return () => clearInterval(intervalId);
   }, []);
 
-
   return (
-    <>
-      {/* Utilisation de la balise Head pour ajouter le préchargement de l'image */}
-      <Head>
-        {/* Balise link pour le préchargement de l'image */}
-        {/* <link rel="preload" href="../public/img/bannierre.webp" as="image" type="image/webp" /> */}
-        {/* Balise meta pour la priorité de récupération */}
-        {/* <meta name="fetchpriority" content="high" /> */}
-        {/* <img rel="preload" src="../public/img/bannierre.webp" as="image"/> */}
-      </Head>
-
-      <section className={styles.banner}>
+    <section className={styles.banner}>
+      <Image src={bannerImg} className={styles.banner__img} alt='img banner' loading="eager"/>
+      <div className={styles.linear__gradient}></div> {/* div pour le linear gradient sur l'image de banniere */}
+      <div className={styles.bloc__chrono}>
         <span>Prochaine Conférence dans :</span>
         <div className={styles.Chronometre}>
           <div className={styles.sous__chrono}>
@@ -78,7 +70,7 @@ export default function Bannierre() {
             </div>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }
