@@ -12,13 +12,18 @@
   list-style-type: none;
 }
 
-.nav a, .program {
+.program {
   color: white;
   position: relative;
   text-decoration: none;
 }
 
-.nav a:hover, .program:hover {
+.nav a{
+  text-decoration: none;
+}
+
+.nav a:hover,
+.program:hover {
   color: var(--first-color-second);
 }
 
@@ -64,6 +69,18 @@
 
 .sub__menu_hiden {
   display: none;
+}
+
+.menu_color {
+  color: #fff;
+}
+
+.active__menu {
+  color: var(--first-color-second);
+  font-weight: var(--font-semi-bold);
+  border: 1px solid white;
+  padding: .5rem .8rem;
+  border-radius: 10px;
 }
 
 

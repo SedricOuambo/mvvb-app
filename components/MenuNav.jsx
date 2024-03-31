@@ -5,6 +5,7 @@ import styles from './MenuNav.module.css';
 import logo from '@/public/img/logo.jpg';
 import { FaBars } from "react-icons/fa";
 import { BiTrash } from "react-icons/bi";
+import { useMenu } from './MenuProvider';
 import Link from 'next/link';
 
 /**
@@ -16,6 +17,8 @@ export default function MenuNav() {
 
     const [toggleIcon, setToggleIcon] = useState(false);
     const [active, setActive] = useState(false);
+    const [activeMenu, setActiveMenu] = useMenu();
+    const handleClick = (menu) => { setActiveMenu(menu); };
 
     const navToggle = () => {
         setToggleIcon(!toggleIcon);
@@ -28,10 +31,34 @@ export default function MenuNav() {
             <h1>MVVB</h1>
         </Link>
         <div className={styles.nav__menu + ' ' + (active && styles.nav__active)}>
-            <div><Link href="/"> Accueil </Link></div>
-            <div><Link href="/jour1">Jour 1</Link></div>
-            <div><Link href="/jour2">Jour 2</Link></div>
-            <div><Link href="/contact">Contact</Link></div>
+            <div>
+                <Link href="/"
+                    className={styles.menu_color + ' ' + (activeMenu === 'AC' ? styles.active__menu : "")}
+                    onClick={() => handleClick('AC')}>
+                    Accueil
+                </Link>
+            </div>
+            <div>
+                <Link href="/jour1"
+                    className={styles.menu_color + ' ' + (activeMenu === 'J1' ? styles.active__menu : "")}
+                    onClick={() => handleClick('J1')}>
+                    Jour 1
+                </Link>
+            </div>
+            <div>
+                <Link href="/jour2"
+                    className={styles.menu_color + ' ' + (activeMenu === 'J2' ? styles.active__menu : "")}
+                    onClick={() => handleClick('J2')}>
+                    Jour 2
+                </Link>
+            </div>
+            <div>
+                <Link href="/contact"
+                    className={styles.menu_color + ' ' + (activeMenu === 'CO' ? styles.active__menu : "")}
+                    onClick={() => handleClick('CO')}>
+                    Contact
+                </Link>
+            </div>
         </div>
         <div onClick={navToggle} className={styles.nav__toggler}>{toggleIcon ? <BiTrash /> : <FaBars />}</div>
     </nav>

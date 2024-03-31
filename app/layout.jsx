@@ -3,6 +3,7 @@ import Bannierre from '@/components/Bannierre';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Inter } from 'next/font/google';
+import { MenuProvider } from '@/components/MenuProvider';
 import '@/styles/globals.css';
 import styles from './layout.module.css';
 
@@ -24,12 +25,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return <html lang="fr">
     <body className={inter.className + ' ' + styles.body}>
-      <Header />
-      <Bannierre />
-      <main className={styles.main}>
-        {children}
-      </main>
-      <Footer />
+      <MenuProvider>
+        <Header />
+        <Bannierre />
+        <main className={styles.main}>
+          {children}
+        </main>
+        <Footer />
+      </MenuProvider>
     </body>
   </html>
 }
