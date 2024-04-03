@@ -15,7 +15,7 @@ export const metadata = {
   openGraph: {
     title: 'Mvvb-app | Accueil',
     description: 'Page d\' accueil de notre application',
-    images: ['./img/logo_mvvb.png']
+    images: ['./logo_mvvb.png']
   }
 }
 
