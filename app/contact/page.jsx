@@ -8,7 +8,7 @@ export const metadata = {
     openGraph: {
         title: 'Mvvb-app | Contact',
         description: 'Page pour nous contacter et avoir plus d\'informations',
-        images: ['/logo_mvvb.png']
+        images: ['./img/logo_mvvb.png']
     }
 }
 

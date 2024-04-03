@@ -18,7 +18,7 @@ export const metadata = {
   openGraph: {
     title: 'Mvvb-app | Présentation',
     description: 'Site web annonçant une conférence sur le mieux vivre.',
-    images: ['/logo_mvvb.png']
+    images: ['./img/logo_mvvb.png']
   }
 }
 

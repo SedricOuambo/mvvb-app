@@ -25,7 +25,7 @@ export const metadata = {
     openGraph: {
         title: 'Mvvb-app | Jour1 : Alimentation',
         description: 'Presentation des activités du premier jour de notre conférence',
-        images: ['/logo_mvvb.png']
+        images: ['./img/logo_mvvb.png']
     }
 }
 

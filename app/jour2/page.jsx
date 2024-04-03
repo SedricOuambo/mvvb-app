@@ -22,7 +22,7 @@ export const metadata = {
     openGraph: {
         title: 'Mvvb-app | Jour2 : Psychologie humaine',
         description: 'Presentation des activités du deuxième jour de notre conférence',
-        images: ['/logo_mvvb.png']
+        images: ['./img/logo_mvvb.png']
     }
 }
 
