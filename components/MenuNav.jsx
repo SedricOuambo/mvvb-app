@@ -5,7 +5,7 @@ import styles from './MenuNav.module.css';
 import logo from '@/public/img/logo.jpg';
 import { FaBars } from "react-icons/fa";
 import { BiTrash } from "react-icons/bi";
-import { useMenu } from './MenuProvider';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
 /**
@@ -17,13 +17,13 @@ export default function MenuNav() {
 
     const [toggleIcon, setToggleIcon] = useState(false);
     const [active, setActive] = useState(false);
-    const [activeMenu, setActiveMenu] = useMenu();
-    const handleClick = (menu) => { setActiveMenu(menu); };
 
     const navToggle = () => {
         setToggleIcon(!toggleIcon);
         setActive(!active);
     }
+
+    const pathName = usePathname();
 
     return <nav className={styles.nav}>
         <Link href="/" className={styles.nav__brand}>
@@ -33,29 +33,25 @@ export default function MenuNav() {
         <div className={styles.nav__menu + ' ' + (active && styles.nav__active)}>
             <div>
                 <Link href="/"
-                    className={styles.menu_color + ' ' + (activeMenu === 'AC' ? styles.active__menu : "")}
-                    onClick={() => handleClick('AC')}>
+                    className={styles.menu_color + ' ' + (pathName === '/' ? styles.active__menu : "")}>
                     Accueil
                 </Link>
             </div>
             <div>
                 <Link href="/jour1"
-                    className={styles.menu_color + ' ' + (activeMenu === 'J1' ? styles.active__menu : "")}
-                    onClick={() => handleClick('J1')}>
+                    className={styles.menu_color + ' ' + (pathName === '/jour1' ? styles.active__menu : "")}>
                     Jour 1
                 </Link>
             </div>
             <div>
                 <Link href="/jour2"
-                    className={styles.menu_color + ' ' + (activeMenu === 'J2' ? styles.active__menu : "")}
-                    onClick={() => handleClick('J2')}>
+                    className={styles.menu_color + ' ' + (pathName === '/jour2' ? styles.active__menu : "")}>
                     Jour 2
                 </Link>
             </div>
             <div>
                 <Link href="/contact"
-                    className={styles.menu_color + ' ' + (activeMenu === 'CO' ? styles.active__menu : "")}
-                    onClick={() => handleClick('CO')}>
+                    className={styles.menu_color + ' ' + (pathName === '/contact' ? styles.active__menu : "")}>
                     Contact
                 </Link>
             </div>
